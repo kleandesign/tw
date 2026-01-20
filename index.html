@@ -2085,11 +2085,15 @@
             }
 
             .cat-description {
-        font-size: 0.8rem !important;  /* 原本是 1rem，這裡改小 */
-        line-height: 1.6 !important;    /* 行高也稍微收緊一點 */
-        max-width: 100% !important;     /* 確保文字不會被切掉 */
-        color: #aaaaaa !important;      /* 稍微調亮一點點增加手機閱讀性 (選用) */
-    }
+                font-size: 0.8rem !important;
+                /* 原本是 1rem，這裡改小 */
+                line-height: 1.6 !important;
+                /* 行高也稍微收緊一點 */
+                max-width: 100% !important;
+                /* 確保文字不會被切掉 */
+                color: #aaaaaa !important;
+                /* 稍微調亮一點點增加手機閱讀性 (選用) */
+            }
 
             /* 3. 內頁大標題下的副標 (Hero Subtitle) */
             .hero-subtitle {
@@ -2104,15 +2108,19 @@
             }
 
             .data-text {
-        font-size: 0.8rem !important;   /* 原本是 1rem，縮小約 10% */
-        line-height: 1.7 !important;    /* 行高稍微調低，讓區塊更緊湊 */
-        color: #d4d4d4 !important;      /* 稍微調亮，增加黑底上的易讀性 */
-    }
+                font-size: 0.8rem !important;
+                /* 原本是 1rem，縮小約 10% */
+                line-height: 1.7 !important;
+                /* 行高稍微調低，讓區塊更緊湊 */
+                color: #d4d4d4 !important;
+                /* 稍微調亮，增加黑底上的易讀性 */
+            }
 
-    /* (選用) 如果覺得規格表 (Client, Year...) 的字也太大，可以加這段 */
-    .spec-item span {
-        font-size: 0.85rem !important;  /* 原本是 0.9rem */
-    }
+            /* (選用) 如果覺得規格表 (Client, Year...) 的字也太大，可以加這段 */
+            .spec-item span {
+                font-size: 0.85rem !important;
+                /* 原本是 0.9rem */
+            }
 
             :root {
                 --layout-padding-x: 20px;
@@ -2711,13 +2719,16 @@
                                 <div>
                                     <span class="data-label">{{ t('about.services') }}</span>
                                     <ul class="text-sm text-gray-400 space-y-2 mt-2">
+                                        <li>Brand Identity</li>
+                                        <li>Brand Logotype</li>
                                         <li>Brand Strategy</li>
                                         <li>Visual Identity System</li>
+                                        <li>Event Key Visual</li>
                                         <li>Art Direction</li>
                                         <li>Spatial Graphics</li>
                                     </ul>
                                 </div>
-                                <div>
+                                <div style="display: none;">
                                     <span class="data-label">{{ t('about.recognition') }}</span>
                                     <ul class="text-sm text-gray-400 space-y-2 mt-2">
                                         <li>Asia Design Prize '23</li>
@@ -2729,7 +2740,7 @@
                         </div>
 
                         <div class="about-image-block animate__animated animate__fadeInRight">
-                            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=1200"
+                            <img src="studio.jpg"
                                 style="height: 100%; width: 100%; object-fit: cover; filter: grayscale(100%);">
                         </div>
                     </div>
@@ -3336,11 +3347,11 @@
                         folder: 'images/101',
                         count: 4
                     },
-                
+
                     {
                         // [案子 201]
                         id: 104,
-                        categoryRef: 'Brand Identity', 
+                        categoryRef: 'Brand Identity',
                         isFeatured: false,
 
                         title: 'Life of {X}',
@@ -3407,7 +3418,7 @@
                         description: 'In this project, the client is an insect studio. We hope to retain the wild and rugged characteristics of insects.',
 
                         folder: 'images/105',
-                        count: 6
+                        count: 5
                     },
                     {
                         // [案子 401]
@@ -3517,45 +3528,11 @@
                         folder: 'images/303',
                         count: 2
                     },
-                    {
-                        // [案子 401]
-                        id: 304,
-                        categoryRef: 'Campaign & Event',
-                        isFeatured: false,
 
-                        title: 'BEPC X CoinEx Exclusive Poker Event',
-                        subtitle: 'BEPC X CoinEx Exclusive Poker Event',
-                        year: '2024',
-                        location: 'Taipei City, Taiwan',
-                        client: 'BEPC Poker',
-                        status: 'Accomplish (continued cooperation)',
-                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
-                        description: 'In this project, the client is an Poker studio. We hope to retain the futuristic and dorable characteristics of Poker world.',
 
-                        folder: 'images/304',
-                        count: 2
-                    },
-                    {
-                        // [案子 301]
-                        id: 305,
-                        categoryRef: 'Campaign & Event',
-                        isFeatured: false,
-
-                        title: 'Kali Chimaek x 桂恭子酒吧',
-                        subtitle: 'Fried Chicken restaurant Event Visual',
-                        year: '2023',
-                        location: 'New Taipei City, Taiwan',
-                        client: 'Kali Chimaek',
-                        status: 'Accomplish (continued cooperation)',
-                        tags: ['Brand Identity', 'Brand Strategy', 'Event Visual Design'],
-                        description: 'This case is for a fried chicken restaurant, so we use lively American and vibrant elements to create a unique logo brand.',
-
-                        folder: 'images/305',
-                        count: 1
-                    },
                     {
                         // [案子 302]
-                        id: 306,
+                        id: 304,
                         categoryRef: 'Campaign & Event',
                         isFeatured: false,
 
@@ -3568,7 +3545,7 @@
                         tags: ['Brand Identity', 'Digital & Social', 'Soft Interior Design', 'Event Visual Design'],
                         description: 'The client hopes to use silk, cotton and linen as the brand image.',
 
-                        folder: 'images/306',
+                        folder: 'images/304',
                         count: 2,
                     },
                     {
@@ -3607,7 +3584,7 @@
                         folder: 'images/202',
                         count: 3,
                     },
-{
+                    {
                         // [案子 101]
                         id: 301,
                         categoryRef: 'Campaign & Event', // 指定這個案子屬於哪個分類
@@ -3853,7 +3830,7 @@
                     },
                     {
                         id: 617,
-                        categoryRef: ['Arts & Culture','Campaign & Event'],
+                        categoryRef: 'Campaign & Event',
                         isFeatured: true,
                         title: 'LE MIROIR DE PARIS',
                         subtitle: 'Lily Chen Double Bass Recital',
@@ -3967,7 +3944,7 @@
                     } else if (activeSection.value === 'featured') {
                         // B. 首頁精選模式 (先抓全部，等等排序後再取前 6 筆)
                         // 使用 [...array] 複製一份，避免動到原始資料順序
-                        results = masterProjectDatabase.value.filter(p => p.isFeatured); 
+                        results = masterProjectDatabase.value.filter(p => p.isFeatured);
                     } else {
                         // C. 一般分類模式
                         const currentCatName = categoryDefinitions.value[currentCategoryIndex.value].name;
@@ -3988,7 +3965,7 @@
                             return yearB - yearA; // 年份大的排前面 (2025 -> 2024 -> ...)
                         }
                         // 如果年份一樣，用 ID 決定 (ID 越大代表越新建立)
-                        return b.id - a.id; 
+                        return b.id - a.id;
                     });
 
                     // 3. 特殊處理：如果是「首頁精選」，排序完後只取前 6 筆
@@ -4372,12 +4349,12 @@
 
                     // 【關鍵優化 1】：大幅減少粒子數量
                     // 手機版只用 10 顆，電腦版用 25 顆 (原本是寫死 50 顆)
-                    const pCount = window.innerWidth < 768 ? 10 : 25; 
+                    const pCount = window.innerWidth < 768 ? 10 : 25;
                     for (let i = 0; i < pCount; i++) particles.push(new Particle());
 
                     const animate = () => {
                         ctx.clearRect(0, 0, width, height);
-                        
+
                         // 更新並繪製粒子點
                         particles.forEach(p => {
                             p.update();
@@ -4389,9 +4366,9 @@
                         for (let i = 0; i < particles.length; i++) {
                             for (let j = i + 1; j < particles.length; j++) {
                                 const dx = particles[i].x - particles[j].x;
-                                
+
                                 // 先判斷 X 軸距離，太遠就直接跳過，不要算 Y 軸 (省效能)
-                                if (Math.abs(dx) < 100) { 
+                                if (Math.abs(dx) < 100) {
                                     const dy = particles[i].y - particles[j].y;
                                     if (Math.abs(dy) < 100) {
                                         ctx.beginPath();
