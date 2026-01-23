@@ -1,0 +1,4500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M3F8BQMS');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description"
+        content="KLEAN DESIGN - Graphic Design / Visual Design 2026. Selected Projects: Corporate, Branding, F&B, Exhibition.">
+    <meta name="author" content="KLEAN DESIGN">
+    <meta name="copyright" content="KLEAN DESIGN 2026">
+    <meta name="keywords" content="Graphic Design, Visual Design, CIS, Branding, Taipei, Taiwan, Portfolio">
+    <meta name="theme-color" content="#050505">
+
+    <title>Klean Design</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="apple-touch-icon" href="logo2.png">
+    <link rel="icon" href="logo2.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <style>
+        /* ==========================================================================
+           KLEAN DESIGN SYSTEM V9.8 - BILINGUAL UPDATE
+           ========================================================================== */
+
+        /* --------------------------------------------------------------------------
+           1. CORE VARIABLES & DESIGN TOKENS
+           -------------------------------------------------------------------------- */
+        :root {
+            /* Color Palette: Monochrome & Accent */
+            --color-bg-deep: #050505;
+            --color-bg-card: #0a0a0a;
+            --color-bg-overlay: rgba(0, 0, 0, 0.95);
+
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #a3a3a3;
+            --color-text-tertiary: #666666;
+
+            /* Accent Color: Pink White / Sakura */
+            --color-accent: #ffb3c1;
+            --color-accent-hover: #ffccd5;
+            --color-accent-dim: rgba(255, 179, 193, 0.15);
+            --color-accent-glow: rgba(255, 179, 193, 0.6);
+
+            /* Glassmorphism Tokens - Ultra High End */
+            --glass-bg: rgba(10, 10, 10, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.09);
+            --glass-highlight: rgba(255, 255, 255, 0.15);
+            --glass-blur: blur(20px);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+
+            /* Typography */
+            --font-family-main: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-family-zh: 'Noto Sans TC', 'Manrope', sans-serif;
+            /* Chinese Font Stack */
+            --font-family-serif: 'Playfair Display', serif;
+            --font-family-brand: 'Bahnschrift Light SemiCondensed', 'Bahnschrift', 'DIN Alternate', sans-serif;
+
+            /* Layout Dimensions */
+            --nav-height: 90px;
+            --sidebar-width: 80px;
+            --mobile-sidebar-width: 50px;
+            --container-max-width: 1800px;
+
+            /* Layout Padding */
+            --layout-padding-x: 160px;
+
+            /* Animation Timing Curves */
+            --ease-authentic: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            /* Z-Index Hierarchy */
+            --z-background: -1;
+            --z-content: 10;
+            --z-sidebar: 4000;
+            --z-page-overlay: 5000;
+            --z-nav: 6000;
+            --z-mobile-menu: 8000;
+            --z-mobile-btn: 8500;
+            --z-modal: 7000;
+            --z-floating: 8000;
+            --z-edit-modal: 9000;
+            --z-cursor: 9999;
+            --z-loader: 10000;
+        }
+
+        /* --------------------------------------------------------------------------
+           2. RESET & BASE STYLES
+           -------------------------------------------------------------------------- */
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+            cursor: auto;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: var(--color-bg-deep);
+            color: var(--color-text-primary);
+            font-family: var(--font-family-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+            letter-spacing: 0.03em;
+        }
+
+        /* Chinese Font Override Class */
+        body.font-zh,
+        .font-zh {
+            font-family: var(--font-family-zh) !important;
+            letter-spacing: 0.05em;
+            /* Chinese needs slightly more breathing room */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020202;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666;
+        }
+
+        /* --------------------------------------------------------------------------
+           3. BACKGROUND & ATMOSPHERE
+           -------------------------------------------------------------------------- */
+        .global-noise {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        #flow-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: var(--z-background);
+            background-color: #050505;
+        }
+
+        .bg-gradient-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, #050505 130%);
+        }
+
+        /* --------------------------------------------------------------------------
+           5. PRELOADER
+           -------------------------------------------------------------------------- */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            z-index: var(--z-loader);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1.2s var(--ease-authentic), visibility 1.2s;
+        }
+
+        .loader-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-logo-container {
+            width: 80px;
+            height: 80px;
+            animation: pulse-logo 2.5s infinite ease-in-out;
+            position: relative;
+        }
+
+        .loader-logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* --------------------------------------------------------------------------
+           6. NAVIGATION SYSTEM (HEADER)
+           -------------------------------------------------------------------------- */
+        .nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: var(--z-nav);
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.4s var(--ease-authentic);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+            opacity: 0.5;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+            height: var(--nav-height);
+            position: relative;
+        }
+
+        /* Brand Block */
+        .brand-block {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            cursor: pointer;
+            margin-right: auto;
+            z-index: 20;
+            position: relative;
+        }
+
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s var(--ease-authentic);
+        }
+
+        .brand-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .brand-block:hover .brand-icon {
+            transform: rotate(180deg);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @keyframes text-shine {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .brand-title {
+            font-family: var(--font-family-brand);
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            line-height: 1;
+
+            background: linear-gradient(90deg, #ffffff 0%, #cececebb 20%, #ffffffc5 40%, #ffffff91 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-shine 5s linear infinite;
+        }
+
+        .brand-subtitle {
+            font-size: 0.5rem;
+            color: rgba(255, 255, 255, 0.479);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* Primary Navigation */
+        .nav-primary-menu {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 3.5rem;
+            z-index: 10;
+        }
+
+        .nav-primary-item {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            color: var(--color-text-tertiary);
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .nav-primary-item:hover,
+        .nav-primary-item.active {
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-primary-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-primary-item:hover::after,
+        .nav-primary-item.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Right Side Cluster (Status + Lang + MobileBtn) */
+        .nav-right-cluster {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            z-index: 20;
+        }
+
+        /* Language Switcher - High End */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-family-brand);
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            color: #444;
+            transition: all 0.3s;
+        }
+
+        .lang-opt {
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .lang-opt.active {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            font-weight: 700;
+        }
+
+        .lang-divider {
+            color: #333;
+            font-weight: 300;
+        }
+
+        .lang-switcher:hover .lang-opt:not(.active) {
+            color: #888;
+        }
+
+        /* Status Block */
+        .nav-status-block {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            font-family: monospace;
+        }
+
+        .status-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 0.65rem;
+            color: #666;
+            line-height: 1.4;
+            padding-right: 1rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .status-item:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .status-label {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #444;
+            font-size: 0.5rem;
+            margin-bottom: 2px;
+        }
+
+        .status-value {
+            color: #ccc;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .live-dot {
+            width: 5px;
+            height: 5px;
+            background-color: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #00ff88;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        }
+
+        /* MOBILE MENU BUTTON */
+        .mobile-menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            position: relative;
+            z-index: var(--z-mobile-btn);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s var(--ease-authentic);
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+
+        .h-line {
+            width: 16px;
+            height: 1px;
+            background-color: #fff;
+            transition: all 0.3s var(--ease-authentic);
+            position: absolute;
+        }
+
+        .h-line:nth-child(1) {
+            transform: translateY(-5px);
+        }
+
+        .h-line:nth-child(2) {
+            width: 12px;
+            transform: translateX(2px);
+        }
+
+        .h-line:nth-child(3) {
+            transform: translateY(5px);
+        }
+
+        .mobile-menu-btn.open {
+            border-color: var(--color-accent);
+        }
+
+        .mobile-menu-btn.open .h-line:nth-child(1) {
+            transform: rotate(45deg);
+            width: 18px;
+            background-color: var(--color-accent);
+        }
+
+        .mobile-menu-btn.open .h-line:nth-child(2) {
+            opacity: 0;
+            width: 0;
+        }
+
+        .mobile-menu-btn.open .h-line:nth-child(3) {
+            transform: rotate(-45deg);
+            width: 18px;
+            background-color: var(--color-accent);
+        }
+
+        /* MOBILE NAV OVERLAY */
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(3, 3, 3, 0.96);
+            backdrop-filter: blur(25px);
+            z-index: var(--z-mobile-menu);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s var(--ease-authentic), visibility 0.5s;
+            overflow: hidden;
+        }
+
+        .mobile-nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-overlay::before {
+            content: '';
+            position: absolute;
+            width: 120vw;
+            height: 120vw;
+            background: radial-gradient(circle, rgba(255, 179, 193, 0.05) 0%, transparent 60%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-bg 30s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-bg {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-close:hover {
+            background: #fff;
+            color: #000;
+            transform: rotate(90deg);
+        }
+
+        .mobile-nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .mobile-nav-link {
+            font-family: var(--font-family-brand);
+            font-size: 1.5rem;
+            font-weight: 450;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.4s;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .mobile-nav-overlay.active .mobile-nav-link {
+            animation: fadeInUp 0.8s var(--ease-authentic) forwards;
+        }
+
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: #fff;
+            transform: scale(1.1);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Category Filter Row (Sub-nav) */
+        .nav-categories-wrapper {
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+            background: rgba(0, 0, 0, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .nav-categories {
+            display: flex;
+            overflow-x: auto;
+            justify-content: center;
+            padding: 0 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            gap: 1rem;
+        }
+
+        .nav-categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-pill {
+            flex: 0 0 auto;
+            padding: 0.8rem 1.5rem;
+            position: relative;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s, background-color 0.3s;
+            border-bottom: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cat-pill:hover {
+            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .cat-pill.active {
+            opacity: 1;
+            border-bottom-color: var(--color-accent);
+        }
+
+        .cat-pill-title {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.15rem;
+        }
+
+        .cat-pill-desc {
+            display: block;
+            font-size: 0.55rem;
+            color: var(--color-text-tertiary);
+        }
+
+        /* --------------------------------------------------------------------------
+           7. MAIN CONTENT AREA
+           -------------------------------------------------------------------------- */
+        .layout-main {
+            padding-top: var(--nav-height);
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 120px;
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            position: relative;
+            z-index: var(--z-content);
+        }
+
+        .category-intro {
+            margin-bottom: 3rem;
+            animation: fadeIn 1s var(--ease-authentic);
+            margin-top: 6rem;
+            padding-top: 10px;
+            padding-left: var(--layout-padding-x);
+            padding-right: 60px;
+        }
+
+        .cat-large-title {
+            font-family: var(--font-family-serif);
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #ffffff 0%, #888888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cat-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .meta-tag {
+            font-size: 0.75rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .meta-line {
+            height: 1px;
+            width: 40px;
+            background-color: var(--color-accent);
+        }
+
+        .cat-description {
+            max-width: 600px;
+            font-size: 1rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Featured Hero */
+        .featured-hero-container {
+            width: 100vw;
+            height: 100vh;
+            margin-top: calc(var(--nav-height) * -1);
+            padding-top: var(--nav-height);
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            border-bottom: none;
+            margin-bottom: 0 !important;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .featured-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s var(--ease-authentic), transform 1.5s ease;
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        .featured-slide.active {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 2;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .featured-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 4rem 60px 4rem var(--layout-padding-x);
+            z-index: 3;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            pointer-events: none;
+        }
+
+        .featured-content>* {
+            pointer-events: auto;
+        }
+
+        .featured-label {
+            display: inline-block;
+            background-color: rgba(255, 239, 242, 0.192);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #d8d8d8;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .featured-title {
+            font-family: var(--font-family-serif);
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .featured-subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            letter-spacing: 0.05em;
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        .slide-indicators {
+            position: absolute;
+            bottom: 4rem;
+            right: 6rem;
+            z-index: 10;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .slide-progress-bar {
+            width: 60px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.2);
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            transition: height 0.3s;
+        }
+
+        .slide-progress-bar:hover {
+            height: 4px;
+        }
+
+        .slide-progress-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background-color: var(--color-accent);
+            box-shadow: 0 0 10px var(--color-accent-glow);
+        }
+
+        .slide-progress-bar.active .slide-progress-fill {
+            animation: slideProgress 5s linear forwards;
+        }
+
+        .grid-container,
+        .arts-list-grid,
+        footer {
+            padding-left: var(--layout-padding-x);
+            padding-right: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* --------------------------------------------------------------------------
+           ARTS & CULTURE SPECIAL LAYOUT CSS (NEW - SPLIT CARDS)
+           -------------------------------------------------------------------------- */
+        .arts-split-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            height: 60vh;
+            gap: 1rem;
+            margin-bottom: 6rem;
+
+            padding-left: var(--layout-padding-x);
+            padding-right: 60px;
+        }
+
+        .arts-cat-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s var(--ease-authentic);
+        }
+
+        .arts-cat-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+        }
+
+        .arts-cat-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s var(--ease-authentic);
+            filter: grayscale(100%) brightness(0.6);
+        }
+
+        .arts-cat-card:hover .arts-cat-img {
+            transform: scale(1.1);
+            filter: grayscale(0%) brightness(0.8);
+        }
+
+        .arts-cat-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            transition: background 0.5s;
+        }
+
+        .arts-cat-card:hover .arts-cat-overlay {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .arts-cat-title {
+            font-family: var(--font-family-serif);
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .arts-cat-btn {
+            padding: 0.8rem 2rem;
+            border: 1px solid #fff;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.7rem;
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .arts-cat-card:hover .arts-cat-btn {
+            opacity: 1;
+            transform: translateY(0);
+            background: #fff;
+            color: #000;
+        }
+
+        /* Arts List Grid (Double Column by Year) */
+        .arts-list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 4rem;
+            row-gap: 4rem;
+        }
+
+        .arts-list-item {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s var(--ease-authentic);
+
+            /* ▼▼▼ 新增這幾行 ▼▼▼ */
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            /* 左邊 60px 給年份，右邊給標題 */
+            column-gap: 1.5rem;
+            /* 年份跟標題中間空 1.5rem 的距離 */
+            align-items: baseline;
+            /* 讓文字底部對齊 */
+
+
+        }
+
+        .arts-list-item:hover {
+            border-top-color: var(--color-accent);
+            transform: translateY(-5px);
+        }
+
+        .arts-year {
+            font-size: 1rem;
+            color: #888888;
+            margin-bottom: 0.5rem;
+            font-family: monospace;
+        }
+
+        .arts-item-title {
+            font-family: var(--font-family-serif);
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.65rem;
+        }
+
+        .arts-item-meta {
+            /* ▼▼▼ 新增這一行 ▼▼▼ */
+            grid-column: 2;
+            /* 強制它排在第 2 欄 (標題的正下方)，不要跑到年份下面 */
+
+            /* 原本的設定保留 */
+            font-size: 0.85rem;
+            color: #c7b9b9;
+            /* 您剛剛改的顏色 */
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        /* Arts Sub Page Header */
+        .arts-sub-header {
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            padding-left: var(--layout-padding-x);
+            padding-right: 60px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-text-tertiary);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+
+        /* --------------------------------------------------------------------------
+           8. PROJECT CARD COMPONENT
+           -------------------------------------------------------------------------- */
+        .project-card {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+            border-radius: 2px;
+            transition: all 0.6s var(--ease-authentic);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+            z-index: 20;
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) brightness(0.9);
+            transition: transform 1.2s var(--ease-authentic), filter 0.5s ease;
+        }
+
+        .project-card:hover .card-img {
+            transform: scale(1.1);
+            filter: grayscale(0%) brightness(1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0.3) 60%,
+                    transparent 100%);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 1;
+            transition: all 0.4s var(--ease-authentic);
+        }
+
+        .card-tags-row {
+            display: none !important;
+        }
+
+        .card-subtitle,
+        .card-footer,
+        .card-divider {
+            opacity: 0.6;
+            transform: translateY(0);
+            transition: opacity 0.4s ease, transform 0.4s var(--ease-authentic);
+        }
+
+        .project-card:hover .card-tags-row,
+        .project-card:hover .card-subtitle,
+        .project-card:hover .card-footer,
+        .project-card:hover .card-divider {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+            opacity: 0.8;
+        }
+
+        .mini-tag {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #cccccc;
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 0.15rem 0.35rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        .card-title {
+            font-family: var(--font-family);
+            font-size: 1.2rem;
+            font-weight: 550;
+            color: #ffffff;
+            letter-spacing: 0.075em;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+            opacity: 1;
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: #ffffffde;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.15rem;
+        }
+
+        .card-divider {
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-text-primary);
+            margin: 0.5rem 0;
+            transform-origin: left;
+        }
+
+        .project-card:hover .card-divider {
+            width: 60px;
+            background-color: var(--color-accent);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* --------------------------------------------------------------------------
+           9. DETAIL VIEW & PAGES (ABOUT/CONTACT)
+           -------------------------------------------------------------------------- */
+        .detail-overlay,
+        .page-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-bg-deep);
+            z-index: var(--z-page-overlay);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            animation: slideUpReveal 0.6s var(--ease-authentic);
+            padding-top: var(--nav-height);
+        }
+
+        .detail-overlay {
+            z-index: 5000;
+            padding-top: 0;
+        }
+
+        .page-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem;
+            width: 100%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* ABOUT PAGE STYLING */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-family-serif);
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-image-block {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .about-image-block::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 179, 193, 0.05);
+            pointer-events: none;
+        }
+
+        /* CONTACT PAGE STYLING */
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card-high-end {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 4rem 2rem;
+            transition: all 0.5s var(--ease-authentic);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .contact-card-high-end::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: scaleX(0);
+            transition: transform 0.6s var(--ease-authentic);
+        }
+
+        .contact-card-high-end:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-card-high-end:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contact-card-high-end i {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--color-text-secondary);
+            transition: all 0.4s var(--ease-authentic);
+        }
+
+        .contact-card-high-end:hover i {
+            color: #ffffff;
+            transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-title {
+            font-family: var(--font-family-brand);
+            font-size: 0.8rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            font-family: var(--font-family-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #ffffff;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .contact-link:hover {
+            border-bottom-color: var(--color-accent);
+        }
+
+        /* Detail Sidebar (Project) */
+        .detail-sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #080808;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            z-index: var(--z-sidebar);
+        }
+
+        .sidebar-close-btn {
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.3s var(--ease-authentic);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-close-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+            transform: rotate(90deg);
+        }
+
+        .sidebar-tags-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .vertical-tag {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(0deg);
+            color: rgba(255, 255, 255, 0.425);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            padding: 1rem 0.25rem;
+            border-left: none;
+            transition: all 0.3s;
+        }
+
+        .vertical-tag:hover,
+        .vertical-tag.active {
+            color: #ffffff;
+            /* 變全白 */
+            font-weight: 700;
+            /* 變粗 */
+            text-shadow: 0 0 15px var(--color-accent), 0 0 30px var(--color-accent);
+            /* 強烈的霓虹光暈 */
+            opacity: 1;
+            transform: scale(1.1);
+            /* 稍微放大一點點 */
+        }
+
+        .detail-wrapper {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .detail-hero {
+            width: 100%;
+            height: 75vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .detail-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+            transition: transform 10s ease;
+        }
+
+        .detail-hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 4rem 5rem;
+            background: linear-gradient(to top, #050505 0%, transparent 100%);
+        }
+
+        .hero-category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-box {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            background: var(--color-accent-dim);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+        }
+
+        .hero-title {
+            font-family: var(--font-family-serif);
+            font-size: 3.5rem;
+            color: #ffffff;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--color-text-secondary);
+            letter-spacing: 0.05em;
+            border-left: 2px solid #ffffff;
+            padding-left: 1.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 5rem;
+            padding: 5rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .info-sidebar {
+            position: sticky;
+            top: 5rem;
+            height: fit-content;
+        }
+
+        .data-group {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 2rem;
+        }
+
+        .data-label {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .data-text {
+            font-size: 1rem;
+            color: #cccccc;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+
+        .grid-2-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .spec-item label {
+            display: block;
+            font-size: 0.65rem;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-item span {
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .tag-cluster {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag-pill {
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #aaa;
+            transition: all 0.3s;
+        }
+
+        .tag-pill:hover {
+            border-color: #fff;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .action-btn-large {
+            width: 100%;
+            padding: 1.25rem;
+            background-color: #ffffff;
+            color: #000000;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border: none;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .action-btn-large:hover {
+            background-color: var(--color-accent);
+            color: #000000;
+        }
+
+        .gallery-stream {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .gallery-block {
+            position: relative;
+            width: 100%;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.02);
+        }
+
+        .img-caption {
+            display: none !important;
+            margin-top: 1rem;
+            font-size: 0.75rem;
+            color: #666;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .img-caption::before {
+            display: none;
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: var(--color-accent);
+        }
+
+        .canvas-footer {
+            margin-top: 5rem;
+            width: 100%;
+            height: 400px;
+            background-color: #020202;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .canvas-overlay-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .big-footer-text {
+            font-size: 8vw;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+
+        /* --------------------------------------------------------------------------
+           10. MODALS & FLOATING UI
+           -------------------------------------------------------------------------- */
+        .floating-menu {
+            position: fixed;
+            bottom: 3rem;
+            right: 3rem;
+            z-index: var(--z-floating);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .fab-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+        }
+
+        .fab-btn:hover {
+            transform: scale(1.15);
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-container {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            z-index: var(--z-edit-modal);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .editor-box {
+            width: 100%;
+            max-width: 650px;
+            background-color: #111111;
+            border: 1px solid #333333;
+            padding: 3rem;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 0.5s var(--ease-authentic);
+        }
+
+        .editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        .editor-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 0.7rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .input-field {
+            width: 100%;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 1rem;
+            color: #fff;
+            font-size: 0.9rem;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #fff;
+            background-color: #000;
+        }
+
+        .input-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .editor-tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .editor-tag-select {
+            font-size: 0.7rem;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #333;
+            color: #666;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .editor-tag-select.selected {
+            background-color: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .gacha-box {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #080808;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .gacha-bg-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 179, 193, 0.2) 0%, transparent 70%);
+            filter: blur(40px);
+            z-index: 0;
+        }
+
+        .gacha-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .gacha-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            animation: pulse-logo 3s infinite;
+        }
+
+        .gacha-result-area {
+            min-height: 150px;
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .global-back-btn {
+            position: fixed;
+            z-index: 9999;
+            cursor: pointer;
+
+            /* 位置設定 */
+            top: 110px;
+            /* 導航欄下方 */
+
+            /* 【關鍵修正】電腦版要避開側邊欄(80px)，所以設 100px */
+            left: 100px;
+
+            /* 大小設定 */
+            width: 40px;
+            height: 40px;
+
+            /* 確保在黑白背景都看得到 */
+            mix-blend-mode: difference;
+            opacity: 0.6;
+            transition: all 0.4s var(--ease-authentic);
+        }
+
+        /* 用 CSS 畫出兩條線，組成一個 X */
+        .global-back-btn::before,
+        .global-back-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            /* 線條長度 */
+            height: 1px;
+            /* 線條粗細 (極細) */
+            background-color: #fff;
+            transition: transform 0.4s var(--ease-authentic);
+        }
+
+        /* 第一條線旋轉 45 度 */
+        .global-back-btn::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        /* 第二條線旋轉 -45 度 */
+        .global-back-btn::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        /* --- 滑鼠互動效果 --- */
+        .global-back-btn:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            /* 微微放大 */
+        }
+
+        /* 滑鼠移上去時，X 旋轉 90度，變成一種動態感 */
+        .global-back-btn:hover::before {
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+
+        .global-back-btn:hover::after {
+            transform: translate(-50%, -50%) rotate(45deg)
+        }
+
+        .global-back-btn.with-menu {
+            /* 原本是 110px，加上選單高度 150px = 260px */
+            top: 180px !important;
+        }
+
+
+
+        @media (max-width: 1024px) {
+            .cat-large-title {
+                font-size: 3rem;
+            }
+
+            .content-grid {
+                padding: 3rem;
+                gap: 3rem;
+            }
+
+            /* Mobile Menu Logic */
+            .nav-primary-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            /* Hide System Status on smaller screens but KEEP right cluster for lang switch */
+            .nav-status-block {
+                display: none;
+            }
+
+            .nav-header {
+                flex-direction: row;
+                height: 80px;
+                gap: 1rem;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1.5rem;
+            }
+
+            .brand-block {
+                margin-right: auto;
+                margin-bottom: 0;
+                width: auto;
+            }
+
+            /* About Grid Collapse */
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image-block {
+                height: 400px;
+            }
+
+            /* Arts Page Responsive */
+            .arts-split-hero {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .arts-cat-card {
+                height: 300px;
+            }
+
+            .arts-list-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .brand-title {
+                font-size: 1rem !important;
+                letter-spacing: 1.5px !important;
+            }
+
+
+            .brand-subtitle {
+                font-size: 0.45rem !important;
+                /* 字體大小維持小小的 */
+                display: block;
+
+                /* ▼▼▼ 新增這兩行 ▼▼▼ */
+                white-space: nowrap !important;
+                /* 【關鍵】強制文字死都不准換行 */
+                letter-spacing: 0.25em !important;
+                /* 原本是 0.3em 太寬了，改小一點讓它塞得進去 */
+
+                /* 如果還是跑版，可以加這行確保寬度足夠 */
+                width: 100%;
+            }
+
+            .featured-subtitle {
+                font-size: 0.9rem !important;
+                line-height: 1.4 !important;
+                max-width: 90%;
+            }
+
+            /* 2. 專案卡片的副標 (Card Subtitle) */
+            .card-title {
+                font-size: 0.9rem !important;
+                letter-spacing: 0.05em !important
+                    /* 電腦版是 1.25rem，這裡改小成 1rem (約 16px) */
+            }
+
+            /* 手機版副標也跟著縮小一點比較協調 */
+            .card-subtitle {
+                font-size: 0.75rem !important;
+                /* 電腦版是 0.85rem，這裡改小成 0.75rem */
+            }
+
+            .cat-description {
+                font-size: 0.8rem !important;
+                /* 原本是 1rem，這裡改小 */
+                line-height: 1.6 !important;
+                /* 行高也稍微收緊一點 */
+                max-width: 100% !important;
+                /* 確保文字不會被切掉 */
+                color: #aaaaaa !important;
+                /* 稍微調亮一點點增加手機閱讀性 (選用) */
+            }
+
+            /* 3. 內頁大標題下的副標 (Hero Subtitle) */
+            .hero-subtitle {
+                font-size: 0.9rem !important;
+            }
+
+
+            .detail-hero-content {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .data-text {
+                font-size: 0.8rem !important;
+                /* 原本是 1rem，縮小約 10% */
+                line-height: 1.7 !important;
+                /* 行高稍微調低，讓區塊更緊湊 */
+                color: #d4d4d4 !important;
+                /* 稍微調亮，增加黑底上的易讀性 */
+            }
+
+            /* (選用) 如果覺得規格表 (Client, Year...) 的字也太大，可以加這段 */
+            .spec-item span {
+                font-size: 0.85rem !important;
+                /* 原本是 0.9rem */
+            }
+
+            :root {
+                --layout-padding-x: 20px;
+            }
+
+            .home-sidebar {
+                display: flex !important;
+                width: 100% !important;
+                height: 40px !important;
+                top: 80px !important;
+                left: 0;
+                flex-direction: row !important;
+                z-index: 8000 !important;
+                padding: 0 !important;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                background: rgba(59, 59, 59, 0.034) !important;
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+
+            }
+
+            .home-sidebar.mobile-hide {
+                display: none !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                width: 0 !important;
+                height: 0 !important;
+                z-index: -1 !important;
+            }
+
+
+            .marquee-track {
+                flex-direction: row !important;
+                width: max-content;
+                animation: scroll-horizontal 45s linear infinite !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                height: 100%;
+                align-items: center;
+                display: flex;
+                padding-left: 1rem;
+                gap: 2rem !important;
+            }
+
+            .vertical-tag {
+                writing-mode: horizontal-tb !important;
+                transform: none !important;
+                padding: 0 !important;
+                font-size: 0.6rem !important;
+                white-space: nowrap;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                border: none !important;
+                color: #ffffff56 !important;
+            }
+
+            .reset-filter-btn {
+                display: none;
+            }
+
+            /* 手機版排版調整 */
+            .page-container {
+                justify-content: flex-start;
+
+                padding-top: 140px;
+
+                padding-left: 40px !important;
+                padding-right: 40px !important;
+
+                padding-bottom: 2rem !important;
+            }
+
+            .layout-main {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .category-intro {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 100px;
+                margin-top: 0;
+            }
+
+            .featured-hero-container+.category-intro {
+                padding-top: 40px !important;
+            }
+
+            /* 手機版選單是橫向滑動的，不會變高，所以不用往下滑那麼多 */
+            /* 但如果您的手機版選單也會擋住，可以微調這裡 */
+            .global-back-btn.with-menu {
+                top: 100px !important;
+                /* 手機版維持原位即可，或者微調 */
+            }
+
+            .global-back-btn {
+                /* 手機版沒有側邊欄，所以貼左邊一點 */
+                left: 25px;
+                top: 100px;
+            }
+
+            .global-back-btn {
+                /* 位置微調 */
+                left: 25px !important;
+                top: 100px !important;
+
+                /* ▼▼▼ 新增這兩行：縮小尺寸 ▼▼▼ */
+                width: 25px !important;
+                /* 原本是 40px，改小成 25px */
+                height: 25px !important;
+            }
+
+            /* 如果覺得線條太粗，也可以順便改細一點 (選用) */
+            .global-back-btn::before,
+            .global-back-btn::after {
+                height: 1px !important;
+                /* 維持極細 */
+            }
+
+
+            .grid-container,
+            footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .nav-header {
+                padding: 0 1.5rem;
+            }
+
+            .nav-categories {
+                padding: 0 1rem;
+            }
+
+            .detail-sidebar {
+                display: none;
+            }
+
+            .detail-wrapper {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+                padding-top: 25px;
+                gap: 3rem;
+            }
+
+            .info-sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .cat-large-title {
+                font-size: 1.6rem !important;
+                /* 改成 1.8rem (約 28px) 比較剛好 */
+                margin-bottom: 1rem !important;
+                line-height: 1.2 !important;
+            }
+
+            /* 2. 點進去後的專案內頁標題 */
+            .hero-title {
+                font-size: 1.6rem !important;
+                /* 原本很大，改小一點 */
+                line-height: 1.1 !important;
+            }
+
+            /* (選用) 內頁標題下面的副標也順便縮一點 */
+            .hero-subtitle {
+                font-size: 0.9rem !important;
+            }
+
+            .detail-hero {
+                height: 50vh;
+                margin-top: 0;
+            }
+
+            .featured-hero-container {
+                width: 100vw;
+                height: 100vh;
+                margin-top: calc(var(--nav-height) * -1);
+                padding-top: var(--nav-height);
+                position: relative;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+                margin-right: 0;
+                border-bottom: none;
+            }
+
+            .featured-img {
+                width: 100vw;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .featured-title {
+                font-size: 2rem;
+            }
+
+            .featured-content {
+                padding: 4rem 35px !important;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+            }
+
+            .slide-indicators {
+                bottom: 2rem;
+                right: 1.5rem;
+                gap: 0.3rem;
+            }
+
+            .slide-progress-bar {
+                width: 30px;
+                height: 2px;
+            }
+
+            .category-intro,
+            .grid-container,
+            .arts-list-grid,
+            footer {
+                padding-left: 35px !important;
+                padding-right: 35px !important;
+            }
+
+            .featured-content {
+                padding-left: 35px !important;
+                padding-right: 35px !important;
+            }
+
+            /* Arts Split Card Mobile */
+            .arts-split-hero {
+                grid-template-columns: 1fr !important;
+                height: auto !important;
+            }
+
+            .arts-cat-card {
+                height: 250px !important;
+            }
+
+            .nav-categories {
+                justify-content: flex-start !important;
+                padding-left: 35px !important;
+                padding-right: 35px !important;
+                overflow-x: auto !important;
+                gap: 2rem !important;
+            }
+
+            .nav-categories::-webkit-scrollbar {
+                display: none;
+            }
+
+            .about-content h2 {
+                font-size: 2.5rem !important;
+                margin-bottom: 1.5rem !important;
+                line-height: 1.1 !important;
+            }
+        }
+
+        /* --------------------------------------------------------------------------
+           13. KEYFRAME ANIMATIONS
+           -------------------------------------------------------------------------- */
+        @keyframes pulse-logo {
+            0% {
+                opacity: 0.3;
+                transform: scale(0.95);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 0.3;
+                transform: scale(0.95);
+            }
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                opacity: 0.1;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+
+            100% {
+                opacity: 0.1;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUpReveal {
+            from {
+                opacity: 0;
+                transform: translateY(100vh);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideProgress {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Marquee Animation */
+        @keyframes scroll-vertical {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        @keyframes scroll-horizontal {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ==========================================================================
+           HOME SIDEBAR & FILTER STYLES
+           ========================================================================== */
+        .home-sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-top: var(--nav-height);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 2rem;
+
+            /* ▼▼▼ 修改這一行 (原本是 var(--z-sidebar)) ▼▼▼ */
+            z-index: 5500;
+            /* 改成 5500，一定要比 detail-overlay (5000) 高 */
+
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: transform 0.4s var(--ease-authentic);
+            overflow: hidden;
+        }
+
+        .filter-mode-title {
+            color: var(--color-accent) !important;
+            text-shadow: 0 0 30px var(--color-accent-glow);
+        }
+
+        .vertical-tag.is-filtered {
+            color: #ffffff;
+            border-left: none;
+            text-shadow: 0 0 10px var(--color-accent-glow);
+            font-weight: 700;
+        }
+
+        .reset-filter-btn {
+            margin-top: auto;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            font-size: 0.65rem;
+            color: var(--color-text-tertiary);
+            cursor: pointer;
+            letter-spacing: 0.2em;
+            padding: 1rem 0.25rem;
+            transition: all 0.3s;
+            z-index: 10;
+            background: var(--color-bg-deep);
+            width: 100%;
+            text-align: center;
+        }
+
+        .reset-filter-btn:hover {
+            color: #fff;
+        }
+
+        .marquee-track {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: scroll-vertical 60s linear infinite;
+            padding-bottom: 2rem;
+        }
+
+        .home-sidebar:hover .marquee-track {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body :class="{ 'font-zh': currentLang === 'tw' }">
+    <canvas id="flow-canvas"></canvas>
+    <div class="bg-gradient-overlay"></div>
+
+    <div class="global-noise"></div>
+
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-logo-container">
+            <img src="logo.png" alt="KLEAN Logo">
+        </div>
+        <div id="loader-fill" style="display:none"></div>
+        <div id="loader-percent" style="display:none"></div>
+    </div>
+
+    <div id="app">
+
+        <div :class="['mobile-nav-overlay', { active: mobileMenuOpen }]">
+            <div class="mobile-menu-close" @click="toggleMobileMenu">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="mobile-nav-list">
+                <div class="mobile-nav-link" @click="navTo('featured'); toggleMobileMenu()">{{ t('nav.featured') }}
+                </div>
+                <div class="mobile-nav-link" @click="navTo('project'); toggleMobileMenu()">{{ t('nav.project') }}</div>
+                <div class="mobile-nav-link" @click="navTo('about'); toggleMobileMenu()">{{ t('nav.about') }}</div>
+                <div class="mobile-nav-link" @click="navTo('contact'); toggleMobileMenu()">{{ t('nav.contact') }}</div>
+            </div>
+            <div class="mt-12 text-xs text-gray-500 uppercase tracking-widest">
+                KLEAN DESIGN SYSTEM V9.8
+            </div>
+        </div>
+
+        <nav class="nav-wrapper">
+            <div class="nav-header">
+                <div class="brand-block" @click="resetToHome">
+                    <div class="brand-icon">
+                        <img src="logo.png" alt="K Logo">
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-title">Klean Design</span>
+                        <span class="brand-subtitle">Clean&nbsp; . &nbsp;Clear&nbsp; . &nbsp;Precise</span>
+                    </div>
+                </div>
+
+                <div class="nav-primary-menu">
+                    <div :class="['nav-primary-item', { active: activeSection === 'featured' }]"
+                        @click="navTo('featured')">
+                        {{ t('nav.featured') }}
+                    </div>
+                    <div :class="['nav-primary-item', { active: activeSection === 'project' }]"
+                        @click="navTo('project')">
+                        {{ t('nav.project') }}
+                    </div>
+                    <div :class="['nav-primary-item', { active: activeSection === 'about' }]" @click="navTo('about')">
+                        {{ t('nav.about') }}
+                    </div>
+                    <div :class="['nav-primary-item', { active: activeSection === 'contact' }]"
+                        @click="navTo('contact')">
+                        {{ t('nav.contact') }}
+                    </div>
+                </div>
+
+                <div class="nav-right-cluster">
+
+                    <div class="lang-switcher" @click="toggleLang">
+                        <span :class="['lang-opt', { active: currentLang === 'en' }]">EN</span>
+                        <span class="lang-divider">/</span>
+                        <span :class="['lang-opt', { active: currentLang === 'tw' }]">繁</span>
+                    </div>
+
+                    <div class="nav-status-block">
+                        <div class="status-item">
+                            <span class="status-label">Local Time</span>
+                            <span class="status-value">{{ currentTime }}</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Location</span>
+                            <span class="status-value">TPE, TWN</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">System</span>
+                            <span class="status-value">
+                                <div class="live-dot"></div> ONLINE
+                            </span>
+                        </div>
+                    </div>
+
+                    <div :class="['mobile-menu-btn', { open: mobileMenuOpen }]" @click="toggleMobileMenu">
+                        <div class="h-line"></div>
+                        <div class="h-line"></div>
+                        <div class="h-line"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="nav-categories-wrapper" :style="{ 
+         maxHeight: activeSection === 'project' && !currentProject ? '150px' : '0', 
+         opacity: activeSection === 'project' && !currentProject ? '1' : '0' 
+     }">
+                <div class="nav-categories">
+                    <div v-for="(cat, index) in categoryDefinitions" :key="index"
+                        :class="['cat-pill', { active: currentCategoryIndex === index && !activeTagFilter }]"
+                        @click="switchCategory(index)">
+                        <span class="cat-pill-title">{{ t('cat.' + cat.name) }}</span>
+                        <span class="cat-pill-desc">{{ t('catDesc.' + cat.name) }}</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="home-sidebar" v-if="!mobileMenuOpen && activeSection !== 'about' && activeSection !== 'contact'"
+            :class="{ 'mobile-hide': activeSection !== 'featured' || currentProject }">
+            <div class="marquee-track" style="padding-top: 2rem;">
+                <div v-for="tag in allDesignTags" :key="tag" class="vertical-tag" :class="{ 
+                'is-filtered': activeTagFilter === tag,
+                'active': currentProject && currentProject.tags.includes(tag) 
+             }">
+                    {{ tag }}
+                </div>
+
+                <div v-for="tag in allDesignTags" :key="'dup-'+tag" class="vertical-tag" :class="{ 
+                'is-filtered': activeTagFilter === tag,
+                'active': currentProject && currentProject.tags.includes(tag) 
+             }">
+                    {{ tag }}
+                </div>
+            </div>
+
+            <div v-if="activeTagFilter && !currentProject" class="reset-filter-btn" @click="clearFilter">
+                CLEAR FILTER ✕
+            </div>
+        </div>
+
+        <transition name="animate__fadeIn">
+            <section v-if="activeSection === 'about'" class="page-overlay animate__animated animate__fadeIn">
+                <div class="page-container">
+                    <div class="about-grid">
+                        <div class="about-content animate__animated animate__fadeInLeft">
+                            <span class="data-label" style="margin-bottom: 2rem;">{{ t('about.label') }}</span>
+                            <h2>KLEAN STUDIO.</h2>
+                            <div class="meta-line mb-8" style="width: 100px;"></div>
+
+                            <p class="cat-description mb-6" style="font-size: 1.1rem; color: #fff;">
+                                {{ t('about.p1') }}
+                            </p>
+                            <p class="cat-description">
+                                {{ t('about.p2') }}
+                            </p>
+
+                            <div class="mt-12 grid grid-cols-2 gap-4">
+                                <div>
+                                    <span class="data-label">{{ t('about.services') }}</span>
+                                    <ul class="text-sm text-gray-400 space-y-2 mt-2">
+                                        <li>Brand Identity</li>
+                                        <li>Brand Logotype</li>
+                                        <li>Brand Strategy</li>
+                                        <li>Visual Identity System</li>
+                                        <li>Event Key Visual</li>
+                                        <li>Art Direction</li>
+                                        <li>Spatial Graphics</li>
+                                    </ul>
+                                </div>
+                                <div style="display: none;">
+                                    <span class="data-label">{{ t('about.recognition') }}</span>
+                                    <ul class="text-sm text-gray-400 space-y-2 mt-2">
+                                        <li>Asia Design Prize '23</li>
+                                        <li>Golden Pin Design '22</li>
+                                        <li>Behance Featured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-image-block animate__animated animate__fadeInRight">
+                            <img src="studio.jpg"
+                                style="height: 100%; width: 100%; object-fit: cover; filter: grayscale(100%);">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </transition>
+
+        <transition name="animate__fadeIn">
+            <section v-if="activeSection === 'contact'" class="page-overlay animate__animated animate__fadeIn">
+                <div class="page-container">
+                    <div class="contact-hero animate__animated animate__fadeInDown">
+                        <h2 class="cat-large-title" style="font-size: 4rem;">{{ t('contact.title') }}</h2>
+                        <p class="text-gray-400 mb-16 tracking-[0.3em] uppercase text-sm">{{ t('contact.subtitle') }}
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="contact-card-high-end animate__animated animate__fadeInUp animate__delay-0.5s group">
+                            <i class="fas fa-envelope"></i>
+                            <h3 class="contact-title">{{ t('contact.inquiries') }}</h3>
+                            <a href="mailto:klean.design.tw@gmail.com" class="contact-link">Email Us</a>
+                        </div>
+
+                        <div
+                            class="contact-card-high-end animate__animated animate__fadeInUp animate__delay-0.5s group">
+                            <i class="fab fa-instagram"></i>
+                            <h3 class="contact-title">Social Media</h3>
+                            <a href="https://www.instagram.com/klean.design/" target="_blank"
+                                class="contact-link">Instagram</a>
+                        </div>
+
+                        <div
+                            class="contact-card-high-end animate__animated animate__fadeInUp animate__delay-0.5s group">
+                            <i class="fab fa-line"></i>
+                            <h3 class="contact-title">Instant Chat</h3>
+                            <a href="https://lin.ee/W7vfoMR" target="_blank" class="contact-link">Line Official</a>
+                        </div>
+                    </div>
+
+                    <div class="mt-20 text-center border-t border-white/10 pt-10">
+                        <span class="text-xs text-gray-600 uppercase tracking-widest">{{ t('footer.location') }}</span>
+                    </div>
+                </div>
+            </section>
+        </transition>
+
+        <main class="layout-main" v-if="!currentProject && activeSection !== 'about' && activeSection !== 'contact'">
+
+            <div v-if="activeSection === 'featured' && !activeTagFilter"
+                class="featured-hero-container animate__animated animate__fadeIn">
+                <div v-for="(slide, sIdx) in featuredProjects" :key="slide.id"
+                    :class="['featured-slide', { 'active': currentSlideIndex === sIdx }]">
+                    <img :src="slide.coverImage" class="featured-img">
+                    <div class="featured-content">
+                        <span class="featured-label">{{ t('featured.label') }}</span>
+                        <h2 class="featured-title">{{ slide.title }}</h2>
+                        <p class="featured-subtitle">{{ slide.subtitle }}</p>
+                        <button
+                            class="mt-8 px-6 py-3 border border-white/30 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+                            @click="openProject(slide)">
+                            {{ t('btn.explore') }}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="slide-indicators">
+                    <div v-for="(dot, dIdx) in featuredProjects" :key="'dot-'+dIdx"
+                        :class="['slide-progress-bar', { active: currentSlideIndex === dIdx }]"
+                        @click="currentSlideIndex = dIdx">
+                        <div class="slide-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-intro"
+                v-if="activeSection === 'project' || activeTagFilter || (activeSection === 'featured' && !activeTagFilter)">
+                <div class="cat-meta-row">
+                    <div class="meta-line"></div>
+                    <span class="meta-tag">{{ activeTagFilter ? 'TAG FILTER MODE' : (activeSection === 'featured' ?
+                        t('meta.updates') : t('catDesc.' + currentCategoryData.name)) }}</span>
+                </div>
+
+                <h2 :class="['cat-large-title', { 'filter-mode-title': activeTagFilter }]">
+                    {{ activeTagFilter ? activeTagFilter : (activeSection === 'featured' ? t('featured.title') :
+                    t('cat.' + currentCategoryData.name)) }}
+                </h2>
+
+                <p class="cat-description">
+                    {{ activeTagFilter ? `Showing all projects categorized under "${activeTagFilter}". Found
+                    ${displayedProjects.length} results.` : (activeSection === 'featured' ? t('featured.desc') :
+                    t('catLong.' + currentCategoryData.name)) }}
+                </p>
+            </div>
+
+            <div
+                v-if="currentCategoryData && currentCategoryData.name === 'Arts & Culture' && !activeTagFilter && activeSection === 'project'">
+
+                <div v-if="!artsSubSection" class="animate__animated animate__fadeIn">
+                    <div class="arts-split-hero" style="display: none;">
+                        <div class="arts-cat-card" @click="openArtsSub('Solo')">
+                            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop"
+                                class="arts-cat-img">
+                            <div class="arts-cat-overlay">
+                                <h3 class="arts-cat-title">{{ t('arts.solo') }}</h3>
+                                <div class="arts-cat-btn">{{ t('btn.view') }}</div>
+                            </div>
+                        </div>
+                        <div class="arts-cat-card" @click="openArtsSub('Ensemble')">
+                            <img src="https://images.unsplash.com/photo-1459749411177-287ce3276916?w=800&auto=format&fit=crop"
+                                class="arts-cat-img">
+                            <div class="arts-cat-overlay">
+                                <h3 class="arts-cat-title">{{ t('arts.ensemble') }}</h3>
+                                <div class="arts-cat-btn">{{ t('btn.view') }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <div v-for="project in artsProjectsByYear" :key="project.id" class="project-card group"
+                            @click="openProject(project)">
+
+                            <div class="card-img-container">
+                                <img :src="project.coverImage" class="card-img" loading="lazy" :alt="project.title">
+                            </div>
+
+                            <div class="card-overlay">
+                                <h3 class="card-title">{{ project.title }}</h3>
+
+                                <div class="card-subtitle">{{ project.subtitle }}</div>
+
+                                <div class="card-divider"></div>
+
+                                <div class="card-footer">
+                                    <span>{{ project.year }}</span>
+                                    <span>{{ project.location }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div v-else class="animate__animated animate__fadeIn">
+                    <div class="arts-sub-header">
+                        <div class="back-link" @click="closeArtsSub">
+                            <i class="fas fa-arrow-left"></i> {{ t('btn.back') }}
+                        </div>
+                        <h2 class="cat-large-title">{{ artsSubSection === 'Solo' ? t('arts.soloFull') :
+                            t('arts.ensembleFull') }}</h2>
+                    </div>
+
+                    <div class="grid-container">
+                        <div v-for="project in filteredArtsProjects" :key="project.id" class="project-card group"
+                            @click="openProject(project)">
+
+                            <div class="card-img-container">
+                                <img :src="project.coverImage" class="card-img" loading="lazy" :alt="project.title">
+                            </div>
+
+                            <div class="card-overlay">
+                                <div class="card-tags-row">
+                                    <span v-for="(tag, tIdx) in project.tags.slice(0, 3)" :key="tIdx" class="mini-tag">
+                                        {{ tag }}
+                                    </span>
+                                </div>
+
+                                <h3 class="card-title">{{ project.title }}</h3>
+
+                                <div class="card-subtitle">{{ project.subtitle }}</div>
+
+                                <div class="card-divider"></div>
+
+                                <div class="card-footer">
+                                    <span>{{ project.year }}</span>
+                                    <span>{{ project.location }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div v-else class="grid-container"
+                v-if="activeSection === 'project' || activeTagFilter || activeSection === 'featured'">
+                <div v-for="(project, pIdx) in displayedProjects" :key="project.id" class="project-card group"
+                    @click="openProject(project)">
+
+                    <div class="card-img-container">
+                        <img :src="project.coverImage" class="card-img" loading="lazy" :alt="project.title">
+                    </div>
+
+                    <div class="card-overlay">
+                        <div class="card-tags-row">
+                            <span v-for="(tag, tIdx) in project.tags.slice(0, 3)" :key="tIdx" class="mini-tag">
+                                {{ tag }}
+                            </span>
+                        </div>
+
+                        <h3 class="card-title">{{ project.title }}</h3>
+
+                        <div class="card-subtitle">{{ project.subtitle }}</div>
+
+                        <div class="card-divider"></div>
+
+                        <div class="card-footer">
+                            <span>{{ project.year }}</span>
+                            <span>{{ project.location }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer
+                class="mt-32 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center text-gray-500 text-xs tracking-widest uppercase gap-4">
+                <div>
+                    © 2026 KLEAN DESIGN STUDIO. TAIPEI.<br>
+                    Email : klean.design.tw@gmail.com
+                </div>
+                <div class="flex gap-6">
+                    <a href="https://www.instagram.com/klean.design/" target="_blank"
+                        class="hover:text-white transition-colors">Instagram</a>
+                    <a href="https://lin.ee/LZU69rp" target="_blank" class="hover:text-white transition-colors">Line</a>
+                    <a href="#" class="hover:text-white transition-colors">Behance</a>
+                </div>
+            </footer>
+        </main>
+
+        <div v-if="currentProject" class="detail-overlay">
+
+            <div class="global-back-btn" :class="{ 'with-menu': activeSection === 'project' }" @click="closeProject">
+            </div>
+
+            <div class="detail-wrapper">
+
+                <div class="detail-hero">
+                    <img :src="currentProject.coverImage" class="detail-hero-img">
+                    <div class="detail-hero-content">
+                        <div class="hero-category-badge">
+                            <span class="badge-box">{{ currentCategoryData ? t('cat.'+currentCategoryData.name) :
+                                'Project' }}</span>
+                            <span class="text-white text-xs uppercase tracking-widest">{{ currentProject.year }}</span>
+                        </div>
+                        <h1 class="hero-title animate__animated animate__fadeInUp">{{ currentProject.title }}</h1>
+                        <div class="hero-subtitle animate__animated animate__fadeInUp animate__delay-0.75s">
+                            {{ currentProject.subtitle }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <aside class="info-sidebar">
+                        <div class="data-group">
+                            <span class="data-label">{{ t('detail.overview') }}</span>
+                            <p class="data-text">{{ currentProject.description }}</p>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-label">Specifications</span>
+                            <div class="grid-2-col">
+                                <div class="spec-item">
+                                    <label>Location</label>
+                                    <span>{{ currentProject.location }}</span>
+                                </div>
+                                <div class="spec-item">
+                                    <label>Client</label>
+                                    <span>{{ currentProject.client }}</span>
+                                </div>
+                                <div class="spec-item">
+                                    <label>Year</label>
+                                    <span>{{ currentProject.year }}</span>
+                                </div>
+                                <div class="spec-item">
+                                    <label>Status</label>
+                                    <span>{{ currentProject.status }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="data-group">
+                            <span class="data-label">Scope of Work</span>
+                            <div class="tag-cluster">
+                                <span v-for="tag in currentProject.tags" :key="tag" class="tag-pill">
+                                    {{ tag }}
+                                </span>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                    <div class="gallery-stream">
+                        <div v-for="(img, idx) in currentProject.gallery" :key="idx" class="gallery-block">
+                            <img :src="img" class="gallery-img" loading="lazy">
+                            <div class="img-caption">
+                                <span>Fig. {{ String(idx + 1).padStart(2, '0') }}</span>
+                                <span>Visual Asset Rendering</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="canvas-footer">
+                    <canvas id="particle-canvas" class="w-full h-full opacity-30"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="floating-menu">
+            <a href="https://lin.ee/W7vfoMR" target="_blank" class="fab-btn" title="Join Line">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 10.5C21 15.1944 16.9706 19 12 19C10.3488 19 8.79838 18.579 7.43319 17.8414L3 19L4.56593 15.3437C3.58047 13.9547 3 12.2899 3 10.5C3 5.80558 7.02944 2 12 2C16.9706 2 21 5.80558 21 10.5Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+
+            <div class="fab-btn" title="Scroll Top" @click="scrollToTop">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+
+        <transition name="animate__fadeIn">
+            <div v-if="showEditModal" class="modal-container" @click.self="showEditModal = false">
+                <div class="editor-box">
+                    <div class="editor-header">
+                        <h3 class="editor-title">Project Configuration</h3>
+                        <button @click="showEditModal = false" class="text-gray-500 hover:text-white">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <div class="editor-form">
+                        <div class="input-group">
+                            <label class="input-label">Project Title</label>
+                            <input v-model="editingItem.title" type="text" class="input-field">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Subtitle (Concept)</label>
+                            <input v-model="editingItem.subtitle" type="text" class="input-field">
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="input-group w-1/2">
+                                <label class="input-label">Year</label>
+                                <input v-model="editingItem.year" type="text" class="input-field">
+                            </div>
+                            <div class="input-group w-1/2">
+                                <label class="input-label">Location</label>
+                                <input v-model="editingItem.location" type="text" class="input-field">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Detailed Description</label>
+                            <textarea v-model="editingItem.description" class="input-field input-textarea"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Classifications (Multi-Select)</label>
+                            <div class="editor-tags-wrapper">
+                                <span v-for="tag in allDesignTags" :key="tag" @click="toggleEditTag(tag)"
+                                    :class="['editor-tag-select', { selected: editingItem.tags.includes(tag) }]">
+                                    {{ tag }}
+                                </span>
+                            </div>
+                        </div>
+                        <button class="action-btn-large" @click="saveChanges">
+                            Commit To Database
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </transition>
+
+        <transition name="animate__fadeIn">
+            <div v-if="showGacha" class="modal-container" @click.self="showGacha = false">
+                <div class="gacha-box">
+                    <div class="gacha-bg-glow"></div>
+                    <div class="gacha-content">
+                        <div class="gacha-icon">✦</div>
+                        <h3 class="hero-title" style="font-size: 2.5rem;">Creative Spark</h3>
+                        <p class="cat-description" style="margin: 0 auto; font-size: 0.8rem;">
+                            AI-POWERED CONCEPT GENERATOR
+                        </p>
+
+                        <div class="gacha-result-area">
+                            <p v-if="!gachaResult"
+                                class="text-gray-500 text-xs tracking-widest uppercase animate-pulse">
+                                Establishing Neural Link...
+                            </p>
+                            <p v-else class="text-xl text-white font-serif italic">
+                                "{{ gachaResult }}"
+                            </p>
+                        </div>
+
+                        <button class="action-btn-large" @click="rollGacha">
+                            Generate Concept
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </transition>
+
+    </div>
+    <script>
+        const { createApp, ref, computed, onMounted, nextTick } = Vue;
+
+        const app = createApp({
+            setup() {
+
+                // --- LANGUAGE & TRANSLATION SYSTEM ---
+                const currentLang = ref('en'); // 'en' or 'tw'
+
+                const toggleLang = () => {
+                    currentLang.value = currentLang.value === 'en' ? 'tw' : 'en';
+                };
+
+                const translations = {
+                    en: {
+                        nav: { featured: "Featured", project: "Project", about: "About", contact: "Contact" },
+                        cat: {
+                            "Brand Identity": "Brand Identity",
+                            "Spatial Experience": "Spatial Experience",
+                            'Campaign & Event': 'Campaign & Event', // NEW
+                            "Arts & Culture": "Arts & Culture"
+                        },
+                        catDesc: {
+                            "Brand Identity": "Strategy & Identity",
+                            "Spatial Experience": "Environment & Exhibition",
+                            "Campaign & Event": "Key Visual & Promotion", // 副標直接點出 Key Visual (KV)
+                            "Arts & Culture": "Performance & Event"
+                        },
+                        catLong: {
+                            "Brand Identity": "We construct rigorous visual systems that define market presence. From engineering firms to lifestyle studios, we translate core values into impactful brand languages through logic and aesthetics.",
+
+                            "Spatial Experience": "Translating narratives into three-dimensional environments. We integrate graphic storytelling with interior spaces—from immersive dining atmospheres to commercial concept stores—creating a cohesive journey for every visitor.",
+
+                            "Campaign & Event": "Visuals that ignite action. Whether for insect exhibitions or vibrant food & beverage promotions, we create high-impact key visuals and dynamic social media assets that capture attention instantly.",
+
+                            "Arts & Culture": "Visualizing sound and movement. We specialize in capturing the essence of musical performance, crafting elegant key visuals for solo recitals and ensembles that resonate with the spirit of the composition."
+                        },
+                        featured: {
+                            label: "Featured Showcase",
+                            title: "Featured Works",
+                            desc: "A glimpse into our design endeavors and creative explorations."
+                        },
+                        meta: { updates: "LATEST UPDATES" },
+                        about: {
+                            label: "About Studio",
+                            p1: "Established in 2020, we are a multidisciplinary design practice operating at the intersection of brand strategy, visual identity, and spatial narrative.",
+                            p2: "Our methodology is reductive yet expressive. We strip away the non-essential to reveal the core truth of a brand, then amplify it through rigorous system logic and emotional aesthetics. We don't just design logos; we architect visual languages.",
+                            services: "Services",
+                            recognition: "Recognition"
+                        },
+                        contact: {
+                            title: "LET'S TALK",
+                            subtitle: "New Projects & Collaborations",
+                            inquiries: "Inquiries"
+                        },
+                        arts: {
+                            solo: "SOLO\nCONCERT",
+                            ensemble: "ENSEMBLE\nCONCERT",
+                            soloFull: "Solo Concerts",
+                            ensembleFull: "Ensemble Concerts"
+                        },
+                        btn: {
+                            explore: "Explore Project",
+                            view: "View Projects",
+                            back: "Back to Arts Overview"
+
+                        },
+
+
+                        // ▼▼▼ 新增的部分 (漏掉的 UI) ▼▼▼
+                        detail: {
+                            overview: "Overview",
+                            specs: "Specifications",
+                            location: "Location",
+                            client: "Client",
+                            year: "Year",
+                            status: "Status",
+                            scope: "Scope of Work",
+                            tags: "Tags",
+                            caption_fig: "Fig.",
+                            caption_desc: "Visual Asset Rendering",
+                            next: "NEXT PROJECT"
+                        },
+                        ui: {
+                            time: "Time",
+                            filter: "FILTER",
+                            clear_filter: "CLEAR FILTER",
+                            filter_by_tag: "Filter By Tag",
+                            filtered_result: "Filtered results for"
+                        },
+                        footer: {
+                            location: "Based in Taipei, Working Globally"
+                        }
+                    },
+                    tw: {
+                        nav: { featured: "精選", project: "案件", about: "關於", contact: "聯絡" },
+                        cat: {
+                            "Brand Identity": "品牌識別",
+                            "Spatial Experience": "空間體驗",
+                            "Campaign & Event": "商業活動", // 或翻成「活動視覺」，但「商業活動」對應 Arts 更工整
+                            "Arts & Culture": "藝文展演"
+                        },
+                        catDesc: {
+                            "Brand Identity": "商業策略與識別",
+                            "Spatial Experience": "環境視覺與展覽",
+                            "Campaign & Event": "活動主視覺與行銷", // 清楚說明是做 KV
+                            "Arts & Culture": "表演藝術與活動"
+                        },
+                        catLong: {
+                            "Brand Identity": "我們建構嚴謹的視覺系統以定義市場定位。無論是工程企業還是生活風格工作室，我們透過邏輯與美學，將核心價值轉化為具影響力的品牌語言。",
+
+                            "Spatial Experience": "將敘事轉化為三維環境體驗。我們將平面敘事整合至實體空間——從沉浸式餐飲氛圍到商業概念店面——為每位訪客打造連貫且深刻的空間旅程。",
+
+                            "Campaign & Event": "引爆行動的視覺能量。無論是昆蟲博覽會還是餐飲行銷活動，我們打造具爆發力的主視覺與社群動態素材，在瞬間抓住受眾目光。",
+
+                            "Arts & Culture": "將聲音與動態視覺化。我們專注於捕捉音樂演出的精髓，為獨奏會與合奏演出打造優雅的主視覺，讓設計與樂曲的精神相互共鳴。"
+                        },
+
+                        featured: {
+                            label: "精選案例",
+                            title: "最新專案",
+                            desc: "一窺我們近期的設計成果與創意探索。"
+                        },
+                        meta: { updates: "最新動態" },
+                        about: {
+                            label: "關於工作室",
+                            p1: "成立於 2020 年，我們是一間跨領域的設計事務所，運作於品牌策略、視覺識別與空間敘事的交匯處。",
+                            p2: "我們的方法是減法卻充滿張力。我們剝除不必要的元素以揭示品牌的核心真相，然後通過嚴謹的系統邏輯和感性美學加以放大。我們不只是設計標誌；我們架構視覺語言。",
+                            services: "服務項目",
+                            recognition: "獲獎與肯定"
+                        },
+                        contact: {
+                            title: "專案諮詢",
+                            subtitle: "新專案與合作洽談",
+                            inquiries: "一般詢問"
+                        },
+                        arts: {
+                            solo: "獨奏會\nCONCERT",
+                            ensemble: "樂團合奏\nCONCERT",
+                            soloFull: "獨奏會系列",
+                            ensembleFull: "樂團合奏系列"
+                        },
+                        btn: {
+                            explore: "探索專案",
+                            view: "查看專案",
+                            back: "返回藝文總覽"
+                        },
+                        detail: {
+                            overview: "專案概覽",
+                            specs: "規格資訊",
+                            location: "地點",
+                            client: "客戶",
+                            year: "年份",
+                            status: "狀態",
+                            scope: "執行項目",
+                            tags: "標籤",
+                            caption_fig: "圖.",
+                            caption_desc: "視覺模擬渲染",
+                            next: "下一個專案"
+                        },
+                        ui: {
+                            time: "當地時間",
+                            filter: "篩選模式",
+                            clear_filter: "清除篩選",
+                            filter_by_tag: "標籤篩選",
+                            filtered_result: "篩選結果："
+                        },
+                        footer: { location: "立足台北，展望全球" }
+                    }
+                };
+
+                // Translation Helper
+                const t = (key) => {
+                    const keys = key.split('.');
+                    let val = translations[currentLang.value];
+                    keys.forEach(k => {
+                        val = val ? val[k] : key;
+                    });
+                    return val;
+                };
+
+                // ====================================================================================
+                // ▼▼▼ [修正 2] 核心資料庫 (Single Source of Truth) ▼▼▼
+                // ====================================================================================
+                const masterProjectDatabase = ref([
+                    {
+                        // [案子 101]
+                        id: 101,
+                        categoryRef: 'Brand Identity', // 指定這個案子屬於哪個分類
+                        isFeatured: true,
+                        featuredOrder: 4,        // 是否出現在精選首頁
+
+                        title: 'HUNG HUEI co.ltd',
+                        subtitle: 'Engineering Company Visual Identity',
+                        year: '2025',
+                        location: 'Taipei, Taiwan',
+                        client: 'Hung Huei co ltd',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy'],
+                        description: 'This company is an engineering company. It uses its own image to create a professional and modern graphic visual logo (H+H+D).',
+
+                        folder: 'images/101',
+                        count: 4
+                    },
+
+                    {
+                        // [案子 201]
+                        id: 104,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: false,
+
+                        title: 'Life of {X}',
+                        subtitle: 'Social Media Studio Visual Identity',
+                        year: '2021',
+                        location: 'Taipei City, Taiwan',
+                        client: 'Life of (X) studio',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Digital & Social'],
+                        description: 'We start with artistic media in design. We use barcodes to symbolize the emergence of digital forms and also represent the symbolism of the studio brand.',
+
+                        folder: 'images/104',
+                        count: 5
+                    },
+                    {
+                        // [案子 301]
+                        id: 102,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: true,
+                        featuredOrder: 2,
+
+                        title: 'Kali Chimaek',
+                        subtitle: 'Fried Chicken restaurant Visual Identity',
+                        year: '2023',
+                        location: 'New Taipei City, Taiwan',
+                        client: 'Kali Chimaek',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Event Visual Design'],
+                        description: 'This case is for a fried chicken restaurant, so we use lively American and vibrant elements to create a unique logo brand.',
+
+                        folder: 'images/102',
+                        count: 5
+                    },
+                    {
+                        // [案子 302]
+                        id: 103,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: true,
+                        featuredOrder: 3,
+
+                        title: 'Silk & Linen',
+                        subtitle: 'Bar & Bistro Visual Identity',
+                        year: '2024',
+                        location: 'Taipei, Taiwan',
+                        client: 'Silk & Linen',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Soft Interior Design', 'Event Visual Design'],
+                        description: 'The client hopes to use silk, cotton and linen as the brand image.',
+
+                        folder: 'images/103',
+                        count: 4,
+                    },
+                    {
+                        // [案子 401]
+                        id: 105,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: false,
+
+                        title: 'Madness Beetles',
+                        subtitle: 'Insect Studio Visual Identity',
+                        year: '2025',
+                        location: 'New Taipei City, Taiwan',
+                        client: 'Madness Beetls Studio',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an insect studio. We hope to retain the wild and rugged characteristics of insects.',
+
+                        folder: 'images/105',
+                        count: 5
+                    },
+                    {
+                        // [案子 401]
+                        id: 106,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: false,
+
+                        title: 'Cryptopaul',
+                        subtitle: 'Crypto Studio Visual Identity',
+                        year: '2025',
+                        location: 'New Taipei City, Taiwan',
+                        client: 'Cryptopaul Studio',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an Crypto studio. We hope to retain the futuristic and dorable characteristics of Crypto character.',
+
+                        folder: 'images/106',
+                        count: 4
+                    },
+                    {
+                        // [案子 302]
+                        id: 107,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: false,
+
+                        title: 'INFINITE . CO',
+                        subtitle: 'Bar & Bistro Visual Identity',
+                        year: '2025',
+                        location: 'Taipei, Taiwan',
+                        client: 'INFINITE . CO',
+                        status: 'Accomplish',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an Bar & Bistro. We hope to retain the sharp and clean characteristics of infinite identity.',
+
+                        folder: 'images/107',
+                        count: 1,
+                    },
+                    {
+                        // [案子 302]
+                        id: 108,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: false,
+
+                        title: 'Standard Taipei',
+                        subtitle: 'Bar & Bistro Visual Identity',
+                        year: '2022',
+                        location: 'Taipei, Taiwan',
+                        client: 'Standard Taipei',
+                        status: 'Accomplish',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an Bar & Bistro. We hope to retain the sharp and clean characteristics of "standard" identity.',
+
+                        folder: 'images/108',
+                        count: 2,
+                    },
+                    {
+                        // [案子 302]
+                        id: 109,
+                        categoryRef: 'Brand Identity',
+                        isFeatured: false,
+
+                        title: 'Wulin Construction Co., Ltd',
+                        subtitle: 'Construction Company Visual Identity',
+                        year: '2022',
+                        location: 'Taipei, Taiwan',
+                        client: 'Wulin Construction Co., Ltd',
+                        status: 'Accomplish',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an Bar & Bistro. We hope to retain the sharp and clean characteristics of "standard" identity.',
+
+                        folder: 'images/109',
+                        count: 2,
+                    },
+                    {
+                        // [案子 401]
+                        id: 302,
+                        categoryRef: 'Campaign & Event',
+                        isFeatured: true,
+                        featuredOrder: 5,
+
+                        title: 'MBS - TIIE Exhibition',
+                        subtitle: '2025 Taiwan International Insect Exhibition',
+                        year: '2025',
+                        location: 'New Taipei City, Taiwan',
+                        client: 'Madness Beetls Studio',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an insect studio. We hope to retain the wild and rugged characteristics of insects.',
+
+                        folder: 'images/302',
+                        count: 6
+                    },
+                    {
+                        // [案子 401]
+                        id: 303,
+                        categoryRef: 'Campaign & Event',
+                        isFeatured: false,
+
+                        title: 'IPL X BEPC Poker Competition',
+                        subtitle: '2025 IPL X BEPC KOL Poker Competition',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: 'BEPC Poker',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Brand Strategy', 'Digital & Social', 'Event Visual Design'],
+                        description: 'In this project, the client is an Poker studio. We hope to retain the futuristic and dorable characteristics of Poker world.',
+
+                        folder: 'images/303',
+                        count: 2
+                    },
+
+
+                    {
+                        // [案子 302]
+                        id: 304,
+                        categoryRef: 'Campaign & Event',
+                        isFeatured: false,
+
+                        title: 'Silk & Linen 1st Anniversary',
+                        subtitle: 'Bar & Bistro',
+                        year: '2025',
+                        location: 'Taipei, Taiwan',
+                        client: 'Silk & Linen',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Digital & Social', 'Soft Interior Design', 'Event Visual Design'],
+                        description: 'The client hopes to use silk, cotton and linen as the brand image.',
+
+                        folder: 'images/304',
+                        count: 2,
+                    },
+                    {
+                        // [案子 501]
+                        id: 201,
+                        categoryRef: 'Spatial Experience',
+                        isFeatured: true,
+                        featuredOrder: 6,
+
+                        title: 'Chi.Burger',
+                        subtitle: 'Breakfast Shop',
+                        year: '2021',
+                        location: 'Hsinchu, Taiwan',
+                        client: 'Chi.Burger ltd',
+                        status: 'Accomplish',
+                        tags: ['Brand Identity', 'Interior Visual Graphic'],
+                        description: 'This project is for the interior wall graphic design for a new concept store.',
+
+                        folder: 'images/201',
+                        count: 3,
+                    },
+                    {
+                        // [案子 302]
+                        id: 202,
+                        categoryRef: 'Spatial Experience',
+                        isFeatured: false,
+
+                        title: 'Silk & Linen Soft Interior',
+                        subtitle: 'Bar & Bistro',
+                        year: '2024',
+                        location: 'Taipei, Taiwan',
+                        client: 'Silk & Linen',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Digital & Social', 'Soft Interior Design', 'Event Visual Design'],
+                        description: 'The client hopes to use silk, cotton and linen as the brand image.',
+
+                        folder: 'images/202',
+                        count: 3,
+                    },
+                    {
+                        // [案子 101]
+                        id: 301,
+                        categoryRef: 'Campaign & Event', // 指定這個案子屬於哪個分類
+                        isFeatured: true,
+                        featuredOrder: 1,         // 是否出現在精選首頁
+
+                        title: 'HHD co.ltd lunar New Year Visual',
+                        subtitle: 'Engineering Company',
+                        year: '2025',
+                        location: 'Taipei, Taiwan',
+                        client: 'Hung Huei co ltd',
+                        status: 'Accomplish (continued cooperation)',
+                        tags: ['Brand Identity', 'Event Visual Design'],
+                        description: 'This company is an engineering company. It uses its own image to create a professional and modern graphic visual logo (H+H+D).',
+
+                        folder: 'images/301',
+                        count: 4
+                    },
+                    {
+                        // [案子 602] - Arts (Solo)
+                        id: 602,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Hua Bang Lin Flute Recital',
+                        subtitle: '林華邦個人音樂會',
+                        year: '2023',
+                        location: 'Taipei, Taiwan',
+                        client: '實踐大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo violin recital featuring classical compositions.',
+                        folder: 'images/602',
+                        count: 3
+                    },
+                    {
+                        id: 603,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Yu Ying Chang Piano Recital',
+                        subtitle: '張伃瑩鋼琴獨奏會',
+                        year: '2023',
+                        location: 'Chayi, Taiwan',
+                        client: '國立嘉義大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo piano recital featuring classical compositions.',
+                        folder: 'images/603',
+                        count: 3
+                    },
+                    {
+                        id: 604,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Yu Ying Chang Piano Recital',
+                        subtitle: '林予捷個人音樂會',
+                        year: '2023',
+                        location: 'New Taipei City, Taiwan',
+                        client: '國立臺灣藝術大學 音樂系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo recital featuring classical compositions.',
+                        folder: 'images/604',
+                        count: 3
+                    },
+                    {
+                        id: 605,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Chiu Sheng Hua Violin Recital',
+                        subtitle: '邱笙驊小提琴獨奏會',
+                        year: '2023',
+                        location: 'New Taipei City, Taiwan',
+                        client: '國立臺灣藝術大學 音樂系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Violin featuring classical compositions.',
+                        folder: 'images/605',
+                        count: 3
+                    },
+                    {
+                        id: 606,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Yu Hui Lai Flute Recital',
+                        subtitle: '賴郁惠長笛獨奏會',
+                        year: '2023',
+                        location: 'Taipei City, Taiwan',
+                        client: '文化大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Flute featuring classical compositions.',
+                        folder: 'images/606',
+                        count: 3
+                    },
+                    {
+                        id: 607,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Lu Kuan Chang Piano Recital',
+                        subtitle: '呂冠樟鋼琴獨奏會',
+                        year: '2023',
+                        location: 'Taipei City, Taiwan',
+                        client: '國立臺灣師範大學 音樂系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Piano featuring classical compositions.',
+                        folder: 'images/607',
+                        count: 3
+                    },
+                    {
+                        id: 608,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Min Xuan Chu Clarinet Recital',
+                        subtitle: '朱閔暄單簧管獨奏會',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: '國立臺灣藝術大學 音樂系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Clarinet featuring classical compositions.',
+                        folder: 'images/608',
+                        count: 3
+                    },
+                    {
+                        id: 609,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Tiffany Wong Viola Recital',
+                        subtitle: '王慶恩中提琴獨奏會',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: '實踐大學 音樂系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Viola featuring classical compositions.',
+                        folder: 'images/609',
+                        count: 3
+                    },
+                    {
+                        id: 610,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'CHEN-PIN KUO Clarinet Recital',
+                        subtitle: '郭宸賓單簧管獨奏會',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: '東吳大學 音樂系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Clarinet featuring classical compositions.',
+                        folder: 'images/610',
+                        count: 3
+                    },
+                    {
+                        id: 611,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: '" 順 其 自 然 "Bamboo Flute Recital',
+                        subtitle: '邱蕙竹笛獨奏會',
+                        year: '2024',
+                        location: 'New Taipei City, Taiwan',
+                        client: '國立臺灣藝術大學 中國音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Bamboo Flute featuring classical compositions.',
+                        folder: 'images/611',
+                        count: 3
+                    },
+                    {
+                        id: 612,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Yun Ju Chen Double Bass Recital',
+                        subtitle: '陳韻如低音提琴笛獨奏會',
+                        year: '2024',
+                        location: 'New Taipei City, Taiwan',
+                        client: '國立臺北藝術大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Double Bass featuring classical compositions.',
+                        folder: 'images/612',
+                        count: 3
+                    },
+                    {
+                        id: 613,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Wei Hsu Violin Recital',
+                        subtitle: '徐葳小提琴獨奏會',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: '實踐大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Violin featuring classical compositions.',
+                        folder: 'images/613',
+                        count: 5
+                    },
+                    {
+                        id: 614,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Chin Wei Hsu Trumpet Recital',
+                        subtitle: '許致偉小號獨奏會',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: '東吳大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Trumpet featuring classical compositions.',
+                        folder: 'images/614',
+                        count: 5
+                    },
+                    {
+                        id: 615,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Hsin Wen Chang Clarinet Recital',
+                        subtitle: '章馨文單簧管獨奏會',
+                        year: '2024',
+                        location: 'Taichung City, Taiwan',
+                        client: '台中教育大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Clarinet featuring classical compositions.',
+                        folder: 'images/615',
+                        count: 5
+                    },
+                    {
+                        id: 616,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Hung Lin Chiang Flute Recital',
+                        subtitle: '江泓霖長笛獨奏會',
+                        year: '2024',
+                        location: 'Taipei City, Taiwan',
+                        client: '國立臺灣藝術大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Flute featuring classical compositions.',
+                        folder: 'images/616',
+                        count: 3
+                    },
+                    {
+                        id: 617,
+                        categoryRef: 'Campaign & Event',
+                        isFeatured: true,
+                        featuredOrder: 7,
+
+                        title: 'LE MIROIR DE PARIS',
+                        subtitle: 'Lily Chen Double Bass Recital',
+                        year: '2024',
+                        location: 'Taipei, Taiwan',
+                        client: 'Lily Chen',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Graphic Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Bass Recital featuring classical compositions.',
+                        folder: 'images/617',
+                        count: 5
+                    },
+                    {
+
+                        id: 618,
+                        categoryRef: 'Arts & Culture',
+                        isFeatured: false,
+                        title: 'Tzu Yun Huang Flute Recital',
+                        subtitle: '黃資勻長笛獨奏會',
+                        year: '2025',
+                        location: 'Hualien City, Taiwan',
+                        client: '國立東華大學 音樂學系',
+                        status: 'Accomplish',
+                        tags: ['Event Visual Design', 'Solo Concert'],
+                        description: 'Key visual design for a solo Flute featuring classical compositions.',
+                        folder: 'images/618',
+                        count: 3
+                    },
+
+
+                ]);
+
+                // 定義分類結構 (不含專案資料，只含分類資訊)
+                const categoryDefinitions = ref([
+                    { name: 'Brand Identity' },
+                    { name: 'Spatial Experience' },
+                    { name: 'Campaign & Event' }, // ✨ 替換這裡：精準描述「活動視覺」
+                    { name: 'Arts & Culture' }
+                ]);
+                // ====================================================================================
+                // ▲▲▲ [設定區] 資料結束 ▲▲▲
+                // ====================================================================================
+
+                // --- [修正 1] 自動化圖片路徑產生器 ---
+                // 程式會自動執行：檢查 masterProjectDatabase，如果設定了 folder，就自動填入路徑
+                const autoGenerateAssets = () => {
+                    masterProjectDatabase.value.forEach(proj => {
+                        if (proj.folder && proj.count > 0) {
+                            // 1. 自動設定封面 (預設為 1.jpg)
+                            // 只有當尚未手動設定 coverImage 時才執行
+                            if (!proj.coverImage) {
+                                proj.coverImage = `${proj.folder}/1.jpg`;
+                            }
+                            // 2. 自動產生畫廊 (1.jpg 到 count.jpg)
+                            // 只有當尚未手動設定 gallery 時才執行
+                            if (!proj.gallery || proj.gallery.length === 0) {
+                                proj.gallery = [];
+                                for (let i = 1; i <= proj.count; i++) {
+                                    proj.gallery.push(`${proj.folder}/${i}.jpg`);
+                                }
+                            }
+                        }
+                    });
+                };
+
+                // 立即執行自動化
+                autoGenerateAssets();
+
+                // --- 1. SYSTEM STATE & INITIALIZATION ---
+                const isLoading = ref(true);
+                const currentBgImage = ref('');
+                const mobileMenuOpen = ref(false);
+                const currentTime = ref('00:00');
+
+                // Navigation State
+                const activeSection = ref('featured'); // 'featured', 'project', 'about', 'contact'
+
+                // --- 2. DATA MODELS ---
+                const allDesignTags = computed(() => {
+                    // 1. 把所有案子的 tags 陣列全部攤平收集起來
+                    const allTags = masterProjectDatabase.value.flatMap(project => project.tags);
+
+                    // 2. 使用 Set 自動過濾掉重複的標籤，再轉回陣列
+                    return [...new Set(allTags)];
+                });
+
+                const currentCategoryIndex = ref(0);
+                const currentProject = ref(null);
+
+                // --- 3. COMPUTED PROPERTIES & FILTER LOGIC ---
+                // 根據 index 取得當前分類的設定檔
+                const currentCategoryData = computed(() => {
+                    // 安全檢查
+                    if (categoryDefinitions.value[currentCategoryIndex.value]) {
+                        return categoryDefinitions.value[currentCategoryIndex.value];
+                    }
+                    return categoryDefinitions.value[0];
+                });
+
+                // Global Filter Logic
+                const activeTagFilter = ref(null);
+
+                // [修正 2] 動態計算顯示的專案列表 (Single Source of Truth)
+                const displayedProjects = computed(() => {
+                    let results = [];
+
+                    // 1. 先根據不同模式 (標籤 / 精選 / 分類) 撈出資料
+                    if (activeTagFilter.value) {
+                        // A. 標籤篩選模式
+                        results = masterProjectDatabase.value.filter(p => p.tags.includes(activeTagFilter.value));
+                    } else if (activeSection.value === 'featured') {
+                        // B. 首頁精選模式 (先抓全部，等等排序後再取前 6 筆)
+                        // 使用 [...array] 複製一份，避免動到原始資料順序
+                        results = masterProjectDatabase.value.filter(p => p.isFeatured);
+                    } else {
+                        // C. 一般分類模式
+                        const currentCatName = categoryDefinitions.value[currentCategoryIndex.value].name;
+                        results = masterProjectDatabase.value.filter(p => {
+                            if (Array.isArray(p.categoryRef)) {
+                                return p.categoryRef.includes(currentCatName);
+                            }
+                            return p.categoryRef === currentCatName;
+                        });
+                    }
+
+                    // 2. 統一執行排序：年份 (新 -> 舊) > ID (大 -> 小)
+                    results.sort((a, b) => {
+                        const yearA = parseInt(a.year) || 0; // 轉成數字，避免文字比較錯誤
+                        const yearB = parseInt(b.year) || 0;
+
+                        if (yearA !== yearB) {
+                            return yearB - yearA; // 年份大的排前面 (2025 -> 2024 -> ...)
+                        }
+                        // 如果年份一樣，用 ID 決定 (ID 越大代表越新建立)
+                        return b.id - a.id;
+                    });
+
+                    // 3. 特殊處理：如果是「首頁精選」，排序完後只取前 6 筆
+                    if (!activeTagFilter.value && activeSection.value === 'featured') {
+                        return results.slice(0, 6);
+                    }
+
+                    return results;
+                });
+                // [修正 2] 自動抓取標記為 isFeatured 的案子做為首頁輪播
+                const featuredProjects = computed(() => {
+                    return masterProjectDatabase.value
+                        .filter(p => p.isFeatured)
+                        .sort((a, b) => {
+                            // 如果有設定 featuredOrder 就依照數字大小排，沒有設定的就排在最後面 (99)
+                            const orderA = a.featuredOrder || 99;
+                            const orderB = b.featuredOrder || 99;
+                            return orderA - orderB;
+                        });
+                });
+
+                // --- [ARTS & CULTURE LOGIC] ---
+                const artsSubSection = ref(null); // 'Solo', 'Ensemble' or null
+
+                const openArtsSub = (type) => {
+                    artsSubSection.value = type;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                const closeArtsSub = () => {
+                    artsSubSection.value = null;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                // Compute all arts projects sorted by year
+                const artsProjectsByYear = computed(() => {
+                    // 1. 先過濾出藝文類
+                    const arts = masterProjectDatabase.value.filter(p => p.categoryRef === 'Arts & Culture');
+
+                    // 2. 雙重排序邏輯
+                    return arts.sort((a, b) => {
+                        // 先抓出年份轉成數字
+                        const yearA = parseInt(a.year);
+                        const yearB = parseInt(b.year);
+
+                        // 如果年份不同，年份大的 (新) 排前面
+                        if (yearA !== yearB) {
+                            return yearB - yearA;
+                        }
+
+                        // 如果年份相同，ID 大的 (新) 排前面
+                        return b.id - a.id;
+                    });
+                });
+
+                // Compute filtered arts projects based on sub-section
+                const filteredArtsProjects = computed(() => {
+                    if (!artsSubSection.value) return [];
+                    const filterTag = artsSubSection.value === 'Solo' ? 'Solo Concert' : 'Ensemble Concert';
+                    return artsProjectsByYear.value.filter(p => p.tags.includes(filterTag));
+                });
+
+
+                // Slideshow Logic for Featured Page & Arts Page
+                const currentSlideIndex = ref(0);
+
+                // Auto rotate slides
+                onMounted(() => {
+                    setInterval(() => {
+                        // Logic for Featured only (Arts slider removed per request)
+                        const isFeaturedMode = activeSection.value === 'featured';
+
+                        if (isFeaturedMode && !activeTagFilter.value && !currentProject.value && activeSection.value !== 'about' && activeSection.value !== 'contact') {
+
+                            // Determine max length based on mode
+                            let maxLength = featuredProjects.value.length;
+
+                            if (maxLength > 0) {
+                                currentSlideIndex.value = (currentSlideIndex.value + 1) % maxLength;
+                            }
+                        }
+                    }, 5000);
+
+                    // Clock updater
+                    setInterval(() => {
+                        const now = new Date();
+                        currentTime.value = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+                    }, 1000);
+                });
+
+                // --- 4. INTERACTION METHODS ---
+
+                const toggleMobileMenu = () => {
+                    mobileMenuOpen.value = !mobileMenuOpen.value;
+                };
+
+                const navTo = (section) => {
+                    activeSection.value = section;
+                    activeTagFilter.value = null;
+                    currentProject.value = null;
+                    artsSubSection.value = null; // Reset arts sub on nav change
+
+                    if (section === 'featured') {
+                        currentCategoryIndex.value = 0;
+                        currentSlideIndex.value = 0;
+                    }
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                // Sub-Category Navigation
+                const switchCategory = (index) => {
+                    activeTagFilter.value = null;
+                    currentCategoryIndex.value = index;
+                    currentProject.value = null;
+                    artsSubSection.value = null; // Reset arts sub on category change
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                const resetToHome = () => {
+                    navTo('featured');
+                };
+
+                // Global Filter Methods
+                const toggleGlobalFilter = (tag) => {
+                    if (activeTagFilter.value === tag) {
+                        activeTagFilter.value = null;
+                    } else {
+                        activeTagFilter.value = tag;
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                const clearFilter = () => {
+                    activeTagFilter.value = null;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                // Project Viewer Logic
+                const openProject = (project) => {
+                    currentProject.value = project;
+                    // Keep background flow animation, do not change static image
+                    window.scrollTo({ top: 0, behavior: 'auto' });
+
+                    nextTick(() => {
+                        initParticleCanvas();
+                    });
+                };
+
+                const closeProject = () => {
+                    currentProject.value = null;
+                };
+
+                // Admin / Editor Logic
+                const addNewProject = () => {
+                    const newProj = {
+                        id: Date.now(),
+                        categoryRef: categoryDefinitions.value[currentCategoryIndex.value].name,
+                        isFeatured: false,
+                        title: 'New Project',
+                        subtitle: 'Concept Phase',
+                        year: '2025',
+                        location: 'Taipei',
+                        tags: ['Graphic Design'],
+                        folder: '',
+                        count: 0,
+                        coverImage: 'logo.png', // Placeholder
+                        description: 'Project details...',
+                        gallery: []
+                    };
+                    masterProjectDatabase.value.push(newProj);
+                };
+
+                const showEditModal = ref(false);
+                const editingItem = ref({});
+
+                const openEditModal = () => {
+                    editingItem.value = JSON.parse(JSON.stringify(currentProject.value));
+                    showEditModal.value = true;
+                };
+
+                const toggleEditTag = (tag) => {
+                    if (editingItem.value.tags.includes(tag)) {
+                        editingItem.value.tags = editingItem.value.tags.filter(t => t !== tag);
+                    } else {
+                        editingItem.value.tags.push(tag);
+                    }
+                };
+
+                const saveChanges = () => {
+                    // Find index in master DB
+                    const idx = masterProjectDatabase.value.findIndex(p => p.id === editingItem.value.id);
+                    if (idx !== -1) {
+                        masterProjectDatabase.value[idx] = JSON.parse(JSON.stringify(editingItem.value));
+                        currentProject.value = masterProjectDatabase.value[idx];
+                        // Re-run auto generation in case folder changed
+                        autoGenerateAssets();
+                    }
+                    showEditModal.value = false;
+                };
+
+                // Tag Filter Logic (Visual Only for Demo)
+                const toggleFilter = (tag) => {
+                    // Placeholder for future logic
+                };
+
+                // File Upload Simulation
+                const handleFileUpload = (e) => {
+                    const files = e.target.files;
+                    if (files && currentProject.value) {
+                        Array.from(files).forEach(file => {
+                            const reader = new FileReader();
+                            reader.onload = (ev) => currentProject.value.gallery.push(ev.target.result);
+                            reader.readAsDataURL(file);
+                        });
+                    }
+                };
+
+                // Gacha System
+                const showGacha = ref(false);
+                const gachaResult = ref(null);
+                const prompts = [
+                    "Design for the senses, not just the eyes.",
+                    "Use negative space as a primary element.",
+                    "Disrupt the grid with organic chaos.",
+                    "Typography is the voice of the brand.",
+                    "Think in textures, not just colors.",
+                    "What would this look like in 2050?",
+                    "Remove everything unnecessary."
+                ];
+
+                const openGacha = () => {
+                    showGacha.value = true;
+                    gachaResult.value = null;
+                };
+
+                const rollGacha = () => {
+                    gachaResult.value = null;
+                    setTimeout(() => {
+                        gachaResult.value = prompts[Math.floor(Math.random() * prompts.length)];
+                    }, 600);
+                };
+
+                // UI Utilities
+                const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                const cursorHover = () => { };
+                const cursorLeave = () => { };
+
+                // --- 5. ANIMATION SYSTEMS (CANVAS & CURSOR) ---
+
+                const initCursor = () => {
+                    // Cursor logic handled by CSS
+                };
+
+                // High-End Flow/Quicksand Animation
+                const initFlowCanvas = () => {
+                    const canvas = document.getElementById('flow-canvas');
+                    if (!canvas) return;
+                    const ctx = canvas.getContext('2d');
+
+                    let width, height;
+                    let particles = [];
+                    const particleCount = 100;
+
+                    const resize = () => {
+                        width = canvas.width = window.innerWidth;
+                        height = canvas.height = window.innerHeight;
+                    };
+
+                    window.addEventListener('resize', resize);
+                    resize();
+
+                    class FlowParticle {
+                        constructor() {
+                            this.x = Math.random() * width;
+                            this.y = Math.random() * height;
+                            this.vx = 0;
+                            this.vy = 0;
+                            this.size = Math.random() * 2;
+                            this.maxSpeed = Math.random() * 0.5 + 0.2;
+                            this.angle = 0;
+                            this.timer = 0;
+                            this.life = Math.random() * 100 + 100;
+                        }
+
+                        update() {
+                            // Simulating Perlin-like noise with trig
+                            this.angle = (Math.cos(this.x * 0.005) + Math.sin(this.y * 0.005)) * Math.PI * 2;
+
+                            this.vx += Math.cos(this.angle) * 0.02;
+                            this.vy += Math.sin(this.angle) * 0.02;
+
+                            // Speed limit
+                            const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+                            if (speed > this.maxSpeed) {
+                                this.vx = (this.vx / speed) * this.maxSpeed;
+                                this.vy = (this.vy / speed) * this.maxSpeed;
+                            }
+
+                            this.x += this.vx;
+                            this.y += this.vy;
+
+                            // Wrap around
+                            if (this.x > width) this.x = 0;
+                            if (this.x < 0) this.x = width;
+                            if (this.y > height) this.y = 0;
+                            if (this.y < 0) this.y = height;
+
+                            this.timer++;
+                        }
+
+                        draw() {
+                            ctx.fillStyle = `rgba(100, 100, 100, ${this.life > 0 ? 0.3 : 0})`;
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+
+                    for (let i = 0; i < particleCount; i++) {
+                        particles.push(new FlowParticle());
+                    }
+
+                    const animate = () => {
+                        // Trail effect
+                        ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
+                        ctx.fillRect(0, 0, width, height);
+
+                        particles.forEach(p => {
+                            p.update();
+                            p.draw();
+                        });
+
+                        requestAnimationFrame(animate);
+                    };
+
+                    animate();
+                };
+
+                let particleFrame;
+                let particleResizeHandler; // 新增：用來存儲監聽器，以便移除
+
+                // --- 優化後的粒子連線動畫 (解決卡頓問題) ---
+                const initParticleCanvas = () => {
+                    const canvas = document.getElementById('particle-canvas');
+                    if (!canvas) return;
+
+                    const ctx = canvas.getContext('2d');
+
+                    // 1. 清除舊的動畫，防止切換頁面時動畫疊加導致越來越卡
+                    if (particleFrame) cancelAnimationFrame(particleFrame);
+                    if (particleResizeHandler) window.removeEventListener('resize', particleResizeHandler);
+
+                    let width = canvas.width = canvas.offsetWidth;
+                    let height = canvas.height = canvas.offsetHeight;
+                    let particles = [];
+
+                    // 重新定義視窗大小改變時的行為
+                    particleResizeHandler = () => {
+                        width = canvas.width = canvas.offsetWidth;
+                        height = canvas.height = canvas.offsetHeight;
+                    };
+                    window.addEventListener('resize', particleResizeHandler);
+
+                    class Particle {
+                        constructor() {
+                            this.x = Math.random() * width;
+                            this.y = Math.random() * height;
+                            this.vx = (Math.random() - 0.5) * 0.5;
+                            this.vy = (Math.random() - 0.5) * 0.5;
+                            this.size = Math.random() * 2 + 1;
+                            this.alpha = Math.random() * 0.5 + 0.1;
+                        }
+                        update() {
+                            this.x += this.vx;
+                            this.y += this.vy;
+                            if (this.x < 0 || this.x > width) this.vx *= -1;
+                            if (this.y < 0 || this.y > height) this.vy *= -1;
+                        }
+                        draw() {
+                            ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+
+                    // 【關鍵優化 1】：大幅減少粒子數量
+                    // 手機版只用 10 顆，電腦版用 25 顆 (原本是寫死 50 顆)
+                    const pCount = window.innerWidth < 768 ? 10 : 25;
+                    for (let i = 0; i < pCount; i++) particles.push(new Particle());
+
+                    const animate = () => {
+                        ctx.clearRect(0, 0, width, height);
+
+                        // 更新並繪製粒子點
+                        particles.forEach(p => {
+                            p.update();
+                            p.draw();
+                        });
+
+                        // 【關鍵優化 2】：簡化連線運算
+                        ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+                        for (let i = 0; i < particles.length; i++) {
+                            for (let j = i + 1; j < particles.length; j++) {
+                                const dx = particles[i].x - particles[j].x;
+
+                                // 先判斷 X 軸距離，太遠就直接跳過，不要算 Y 軸 (省效能)
+                                if (Math.abs(dx) < 100) {
+                                    const dy = particles[i].y - particles[j].y;
+                                    if (Math.abs(dy) < 100) {
+                                        ctx.beginPath();
+                                        ctx.moveTo(particles[i].x, particles[i].y);
+                                        ctx.lineTo(particles[j].x, particles[j].y);
+                                        ctx.stroke();
+                                    }
+                                }
+                            }
+                        }
+                        particleFrame = requestAnimationFrame(animate);
+                    };
+                    animate();
+                };
+
+                // --- 6. INITIALIZATION ---
+                onMounted(() => {
+                    initCursor();
+                    initFlowCanvas();
+
+                    const overlay = document.getElementById('loader-overlay');
+
+                    setTimeout(() => {
+                        overlay.classList.add('hidden');
+                        isLoading.value = false;
+                    }, 2000);
+                });
+
+                return {
+                    // State
+                    isLoading,
+                    currentCategoryIndex,
+                    currentCategoryData,
+                    categoryDefinitions,
+                    currentProject,
+                    currentBgImage,
+
+                    allDesignTags,
+                    masterProjectDatabase, // 暴露主資料庫
+
+                    // Nav State
+                    activeSection,
+                    mobileMenuOpen,
+                    currentTime,
+
+                    // Language State
+                    currentLang,
+                    toggleLang,
+                    t,
+
+                    // Slideshow State
+                    currentSlideIndex,
+                    featuredProjects,
+
+                    // Modals
+                    showEditModal,
+                    editingItem,
+                    showGacha,
+                    gachaResult,
+
+                    // Filter State
+                    activeTagFilter,
+                    displayedProjects,
+
+                    // Arts Logic
+                    artsSubSection,
+                    openArtsSub,
+                    closeArtsSub,
+                    artsProjectsByYear,
+                    filteredArtsProjects,
+
+                    // Methods
+                    navTo,
+                    switchCategory,
+                    openProject,
+                    closeProject,
+                    resetToHome,
+                    toggleMobileMenu,
+
+                    addNewProject,
+                    openEditModal,
+                    toggleEditTag,
+                    saveChanges,
+                    toggleFilter,
+                    toggleGlobalFilter,
+                    clearFilter,
+
+                    openGacha,
+                    rollGacha,
+
+                    handleFileUpload,
+
+                    scrollToTop,
+                    cursorHover,
+                    cursorLeave
+                };
+            }
+        });
+
+        app.mount('#app');
+    </script>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3F8BQMS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>
